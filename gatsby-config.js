@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `You're Welcome`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Jihoon LEE (also known as Ernesto)`,
+      summary: `who is a S/W engineer`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `A blog on S/W engineering`,
+    siteUrl: `https://jihoon-ernesto.github.io/`,
     social: {
-      twitter: `kylemathews`,
+      github: `jihoon-ernesto`,
     },
   },
   plugins: [
