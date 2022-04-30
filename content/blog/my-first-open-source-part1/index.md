@@ -1,6 +1,6 @@
 ---
 title: 나의 얼렁뚱땅 오픈소스 참여기 - part 1
-date: 2021-09-27 11:53:00 +0900
+date: 2021-09-27T11:53:00+09:00
 tags:
   - open source
   - xterm.js
