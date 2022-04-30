@@ -12,6 +12,9 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-20.04
+    env:
+      npm_config_platform: linux
+      npm_config_arch: x64
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
@@ -19,9 +22,6 @@ jobs:
       # ref) https://github.com/marketplace/actions/github-action-for-yarn
       - name: Setup Yarn
         uses: borales/actions-yarn@v2.3.0
-        env:
-          npm_config_platform: linux
-          npm_config_arch: x64
         with:
           cmd: install      # will run `yarn install` command
 
