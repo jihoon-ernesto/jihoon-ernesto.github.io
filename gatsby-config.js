@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `You're Welcome`,
+    title: `나의 얼렁뚱땅 프로그래밍`,
     author: {
       name: `Jihoon LEE (also known as Ernesto)`,
       summary: `who is a S/W engineer`,
