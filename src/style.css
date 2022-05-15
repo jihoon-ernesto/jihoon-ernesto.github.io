@@ -319,6 +319,10 @@ a:focus {
   margin-bottom: var(--spacing-8);
 }
 
+.comments-wrapper {
+  margin-bottom: 50px;
+}
+
 /* Media queries */
 
 @media (max-width: 42rem) {
