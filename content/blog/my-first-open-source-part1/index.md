@@ -98,3 +98,9 @@ xterm.js의 github 페이지를 찾아갔다. `git clone`을 하고 빌드를 �
   - [issue #3400 - Need to handle 'cmd + .' on macOS](https://github.com/xtermjs/xterm.js/issues/3400)
   - [PR #3401 - Handle 'cmd + .' on macOS](https://github.com/xtermjs/xterm.js/pull/3401)
 - [NPM package 로컬에서 테스트하기](https://velog.io/@johnyworld/NPM-package-로컬에서-테스트하기)
+
+---
+
+**Note**
+
+*이 글은 아직 공사중인 다른 블로그 사이트에 먼저 쓴 글입니다. 그 사이트가 공개되면 출처를 남기겠습니다.*

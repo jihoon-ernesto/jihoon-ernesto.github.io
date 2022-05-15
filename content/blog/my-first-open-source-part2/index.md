@@ -103,3 +103,9 @@ T는 xterm의 프로젝트 주인 아니었어? VS Code에 커밋 권한까지 �
 - [VS Code PR #131025 - Add terminal keybinding for cmd+. → ctrl+c to match macOS Terminal](https://github.com/microsoft/vscode/pull/131025)
 - [VS Code v1.60 Release Note](https://code.visualstudio.com/updates/v1_60)
 - [Google search: "매드맥스 기억해 줘"](https://www.google.com/search?q=%EB%A7%A4%EB%93%9C%EB%A7%A5%EC%8A%A4+%EA%B8%B0%EC%96%B5%ED%95%B4+%EC%A4%98)
+
+---
+
+**Note**
+
+*이 글은 아직 공사중인 다른 블로그 사이트에 먼저 쓴 글입니다. 그 사이트가 공개되면 출처를 남기겠습니다.*
