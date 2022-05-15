@@ -320,7 +320,7 @@ a:focus {
 }
 
 .comments-wrapper {
-  margin-bottom: 50px;
+  margin-bottom: var(--spacing-10);
 }
 
 /* Media queries */
