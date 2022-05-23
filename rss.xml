@@ -1,4 +1,355 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A blog on S/W engineering]]></description><link>https://jihoon-ernesto.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 15 May 2022 15:31:48 GMT</lastBuildDate><item><title><![CDATA[나의 얼렁뚱땅 오픈소스 참여기 - part 2]]></title><description><![CDATA[(이전 글: 나의 얼렁뚱땅 오픈소스 참여기 - part…]]></description><link>https://jihoon-ernesto.github.io/my-first-open-source-part2/</link><guid isPermaLink="false">https://jihoon-ernesto.github.io/my-first-open-source-part2/</guid><pubDate>Thu, 07 Oct 2021 09:37:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;(이전 글: &lt;a href=&quot;../my-first-open-source-part1/&quot;&gt;나의 얼렁뚱땅 오픈소스 참여기 - part 1&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A blog on S/W engineering]]></description><link>https://jihoon-ernesto.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 23 May 2022 03:08:32 GMT</lastBuildDate><item><title><![CDATA[우리 동네 고양이 - part 3]]></title><description><![CDATA[(이전 글: 우리 동네 고양이 - part 2) 방법은 멀리 있지 않았다. 미키가 여태까지 쓰고 있던 AWS Amplify를 그대로 쓰면 되는 것이었다. 단, 웹 콘솔이 아니라 CLI 이용해서. “Amplify에서 frontend와 backend…]]></description><link>https://jihoon-ernesto.github.io/my-neighbor-cats-part3/</link><guid isPermaLink="false">https://jihoon-ernesto.github.io/my-neighbor-cats-part3/</guid><pubDate>Tue, 21 Dec 2021 09:25:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;(이전 글: &lt;a href=&quot;../my-neighbor-cats-part2/&quot;&gt;우리 동네 고양이 - part 2&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;방법은 멀리 있지 않았다. 미키가 여태까지 쓰고 있던 AWS Amplify를 그대로 쓰면 되는 것이었다. 단, 웹 콘솔이 아니라 CLI 이용해서.&lt;/p&gt;
+&lt;p&gt;“Amplify에서 frontend와 backend 연결하는 방법 있는 것 아시잖아요? git 브랜치를 여러 개 만들 수 있듯이 backend 환경을 여러 개 만들 수 있어요. 각각의 backend 환경을 상황에 맞게 알맞은 git 브랜치에 연결해서 사용하면 돼요.”&lt;/p&gt;
+&lt;p&gt;Office Hour 시간에 AWS의 W님이 해준 대답이었다. 아… 그런 것이었다. 분명히 세미나 시간에 들었던 것이지만, 역시 직접 머리를 부딪쳐봐야 알게 되는 것이었다.&lt;/p&gt;
+&lt;p&gt;미키가 대충 이해한 바로는 이런 식이다. AWS 클라우드를 구성하는 방식은 여러 가지가 있을 수 있는데, 첫번째는 AWS 콘솔 웹페이지에 들어가서 마우스 클릭, 클릭, 하면서 구성하는 방식이다. Lambda 함수의 코드도 웹 화면에서 입력할 수 있다. 일단 처음 접할 때는 GUI 통해서 하는 거라 비교적 쉽게 접근할 수 있다는 장점이 있지만, 무슨 페이지 어떤 옵션에서 뭘 어떻게 했었는지 기억하기가 어렵고 여러 사람이 같이 작업하기 힘들다는 단점이 크다. 여태까지 미키와 친구들이 뚝딱뚝딱 해오고 있던 방식이었다.&lt;/p&gt;
+&lt;p&gt;두번째는 로컬 PC의 터미널에서 CLI 명령어들을 입력해서 구성하는 방식이다. Amplify 서비스의 경우, &lt;code class=&quot;language-text&quot;&gt;amplify add function&lt;/code&gt; 명령으로 로컬 PC 환경에서 Lambda Function을 추가하고, &lt;code class=&quot;language-text&quot;&gt;amplify push&lt;/code&gt; 명령으로 (마치 &lt;code class=&quot;language-text&quot;&gt;git push&lt;/code&gt; 하듯이) AWS 클라우드에 올리는 방식이다. 결과적으로 클라우드 자원이 만들어지는 것은 첫번째 방식을 쓰는 것과 마찬가지이지만, 어떤 명령어를 써서 만들었는지 기록을 남기기가 더 수월하다. 사용한 터미널 명령어들을 git 커밋 메시지에 써놓기만 해도 될 테니까. 비록 터미널 창에서 텍스트 질문 답변 식으로 진행하는 게 갑갑한 느낌이 들기도 하지만, 무슨 말인지 잘 몰라서 갑갑한 걸로 치자면 웹 콘솔 페이지도 별반 차이 없으니 도긴개긴이다.&lt;/p&gt;
+&lt;p&gt;게다가 Amplify CLI의 경우 결정적인 장점은 백엔드 환경을 왔다갔다하면서 작업할 수 있게 지원해준다는 것이다. &lt;code class=&quot;language-text&quot;&gt;amplify env checkout&lt;/code&gt; 명령으로 백엔드 환경 사이를 오갈 수 있고, 한 백엔드 환경에서 만든 자원은 다른 백엔드 환경 (말하자면 안정된 상태를 유지해야 하는 main 환경) 에 영향을 주지 않게 할 수 있다. 즉, main 환경 외에 dev 환경을 하나 더 만들어놓는다면, dev 환경에서 만든 DB나 Lambda 함수는 main 환경과는 별도로 관리되기 때문에 마음 놓고 이것저것 실험하고 삽질을 해도 되는 것이다. 바로 이거였다! 이런 식으로 개발 환경 구성을 해놓고 시작해야 팀 작업을 제대로 할 수 있을 것이었다.&lt;/p&gt;
+&lt;p&gt;하지만, 그것도 이론적으로 좋은 것이고 그 방법론을 제대로 숙지한 상태에서 작업하는 거라면 괜찮았을 테지만, 미키와 친구들은 다들 AWS 초보… 실제로 해보니 완전히 깔끔하게 돌아가는 느낌은 아니었다. 로컬 인프라 상태를 &lt;code class=&quot;language-text&quot;&gt;amplify push&lt;/code&gt; 해서 클라우드로 올렸는데 일부 파일이 또 변경되는 경우가 있기도 하고, &lt;code class=&quot;language-text&quot;&gt;git push/pull&lt;/code&gt; 상태와 &lt;code class=&quot;language-text&quot;&gt;amplify push/pull&lt;/code&gt; 상태가 헷갈릴 때도 많고 그랬다. 뭐, 그런 것도 미키가 아직 익숙하지 않아서 미심쩍게 느낀 것일 수도 있다.&lt;/p&gt;
+&lt;p&gt;*&lt;/p&gt;
+&lt;p&gt;회사 옆 스타벅스는 여전히 활기가 넘친다. 코로나19 조심하느라 다들 마스크 쓰고 돌아다니고, 앉을 수 있는 자리도 이전보다 줄어들었지만 그래도 늘 북적인다. 그 무리들 중, 출입문 옆 한 구석 동그란 테이블에 미키와 W, K가 노트북 하나 놓고 옹기종기 앉아있다. 오늘은 첫번째 오프라인 모임이다. 그렇다, 이제 프로젝트 막바지를 향해 가고 있는 와중에 처음으로 얼굴을 마주하게 된 것이다.&lt;/p&gt;
+&lt;p&gt;“진작에 이렇게 모였어야 하는데 죄송해요. 이제서야 뵙게 됐네요.”&lt;/p&gt;
+&lt;p&gt;사실 미키로서는 W와 K에게 어느 정도로 열심히 이 프로젝트에 참여해달라고 요청해야 할지 애매하기는 했다. 각자 팀도 다르고 원래 하던 일들도 있으니, 사이드로 하는 이 작업에 미키가 무작정 푸시할 수는 없는 노릇이니까. 그래도, 기왕에 같이 하기로 한 것이었으니 조금은 더 적극적으로 연락하고 모일 필요는 있었고, 그건 미키가 살짝 놓친 점이었다.&lt;/p&gt;
+&lt;p&gt;뒤늦은 첫 모임이었지만, 어쩌면 그래서 더 그랬는지도 모르지만, 다들 할 말이 많았다. 자기가 했던 삽질 자랑도 한참 하고 (서로 완전히 다 알아들은 것 같지는 않았지만…), W는 AWS 계정 로그인을 좀 더 편하게 하는 팁도 알려주고, K는 우리가 처음 계획할 때 고급 기능으로 생각해둔 Rekognition 서비스를 이용한 고양이 이미지 인식 기능을 만들어보겠다고 의욕을 보여줬다. 그래, 팀으로 같이 뭘 한다는 게 이런 거지. 따뜻한 라떼도 맛이 좋았다. 미키는 오래간만에 이런 기분을 느껴보는 것 같았다. 같이 일하는 게 재미있다, 재/미/있/다/는 느낌.&lt;/p&gt;
+&lt;p&gt;*&lt;/p&gt;
+&lt;p&gt;거의 다 됐다. 일주일의 시간을 더 얻은 덕분에 그래도 데모를 보여줄 수 있는 정도로는 만들어지게 되었다. 이제 K가 작업해준 고양이 인식 기능 하나만 더 붙이면 정말 좋을 것 같다. 원래 고급 기능으로 분류했던 것까지 해내는 것이니 이 얼마나 뿌듯한 일인가.&lt;/p&gt;
+&lt;p&gt;Rekognition을 이용해서 고양이인지 아닌지 판별하는 것은 별도의 Lambda 함수로 구성되어 있었고, 이번에는 파이썬 대신 Node.js 로 구현되어 있었다. 이미지 파일 저장용 S3 버킷에 새 사진이 업로드되면 이 판별 함수가 실행되도록 하면 되었는데, 그러려면 시스템 연동 경로를 약간 수정해야 했다. 고양이 판별용 Lambda 함수 말고 그 전에 W가 만들어준 썸네일 생성용 Lambda 함수도 있었는데, 그 두 Lambda 함수 모두 S3 버킷의 새 이미지 업로드 이벤트를 트리거로 삼아 반응해야 하는 것이었다. 하지만 S3 버킷에서 직접 이벤트를 받는 것은 단 하나의 Lambda 에서만 가능했기 때문에, 다른 연결 방식이 필요했다.&lt;/p&gt;
+&lt;p&gt;미키는 SNS(Simple Notification Service)를 사용하기로 했다. S3 버킷의 이미지 업로드가 &lt;code class=&quot;language-text&quot;&gt;cat-photo-uploaded&lt;/code&gt; 라는 SNS 토픽을 발생시키도록 하고, 이 토픽을 두 개의 Lambda 함수에서 받아서 각각 자기 할 일을 하는 거다. 하나는 원본 이미지로부터 썸네일 이미지를 생성해서 따로 저장해두고, 다른 하나는 원본 이미지를 살펴보고 고양이 사진인지 아닌지를 판별한 다음 DB에 결과를 쓰는 거다. 이거 고양이 맞음, 또는 고양이 아님.&lt;/p&gt;
+&lt;p&gt;Amplify CLI 에서 곧바로 SNS topic을 생성할 수 있으면 좋을 텐데, 미키는 CLI에서는 딱 맞는 방법을 찾지는 못했다. &lt;code class=&quot;language-text&quot;&gt;amplify add notifications&lt;/code&gt; 명령으로 할 수 있을 줄 알았는데, 지금 사용하려는 상황에 맞는 걸 생성하는 방법은 아닌 것 같았다. Amplify CLI가 커버할 수 있는 영역이 한정되어 있다고 들었는데 어쩌면 이것도 그런 것일지도 몰랐다. 가능한 한 모든 것을 기록으로 남기고 싶었는데… 미키는 약간 아쉬운 마음이 들었다. 제대로 이력을 남기면서 클라우드 인프라 관리를 하려면 CDK 같은 본격적인 IaC(Infra as Code) 도구를 함께 써야 하는 것 같았다.&lt;/p&gt;
+&lt;p&gt;좋아, 일단은 되게 해야지. 웹 콘솔에서 추가하고, S3 버킷과 두 Lambda 사이를 연결해주었다. Lambda의 입력으로 들어오는 이벤트 개체의 형식이 달라졌으니 그 부분들의 코드도 살짝 수정해주고. 이제 AWS에 약간은 익숙해진 것이었을까? 미키는 이제 어찌어찌 대충 구현하는 건 그럭저럭 할만하다고 느꼈다. “다 필요 없고요. 일단 돌아가게 만들어보세요.” AWS I 님의 메시지는 프로젝트 기간 내내 마치 요다의 메시지처럼 미키의 머리 속을 맴돌고 있었다. &lt;em&gt;다 필요 없고요… 다 필요 없고요…&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;그런데 아직 하나가 해결이 안 되고 있었다. 고양이 판별 결과를 DB에 남겨야 하는데, DynamoDB에 접근해서 쓰는 게 잘 안 되고 있었다. 로그를 찍는 코드를 넣었는데도, CloudWatch에 아무 로그도 남지 않고. 어떻게 된 거지?&lt;/p&gt;
+&lt;p&gt;일요일 오후였다. 이제 구현 작업은 마무리를 하고, 발표 자료를 만들어야 할 시점이었다. 가족들은 밖에서 문을 두드리고 있었다. &lt;em&gt;“Do you wanna build a snowman?”&lt;/em&gt; 아니 그건 아니고. 하여튼 얼마간을 끙끙댄 미키는 약간, 그만 하고 싶다는 생각도 들었다. ‘이건 그냥 뺄까..?’ 있으면 좋지만 없어도 뭐, 큰 지장이 있는 건 아닌 기능이었으니까. 하지만 미키는 곧 머리를 흔들었다. 아냐, 이건 분명히 별 거 아닌 걸 몰라서 헤매고 있는 걸 거야. 이런 걸 해결 못해서 멈추면 너무 아깝지.&lt;/p&gt;
+&lt;p&gt;그리고 안타깝게도, 미키가 맞았다. DB에 접근하는 코드는 어쩌면 당연히 비동기로 동작하도록 해야 하는데, 그 구현을 제대로 안 했기 때문에 DB 관련 동작을 제대로 수행하기도 전에 Lambda 함수가 종료되어 버린 것이었고, 따라서 로그조차도 남지 않았던 것이었다. 이런… 미키는 몹시 부끄러운 생각이 들었다. 명색이 JavaScript 개발자라고 하면서 Promise 비동기 코드도 제대로 못 짜서 이렇게 헤매다니. 내가 이런 걸 잘 몰라서 헤맸다는 건 아무한테도 얘기하지 말아야지. 남부끄러운 일이니까. 암, 그렇고말고. 절대 말 안 할 거야.&lt;/p&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/23c5ae3b497c73e0aabaecbe8f956ae2/89048/my-neighbor-cats-screenshot-1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 177.8481012658228%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,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&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;스크린샷-1&quot;
+        title=&quot;스크린샷-1&quot;
+        src=&quot;/static/23c5ae3b497c73e0aabaecbe8f956ae2/f058b/my-neighbor-cats-screenshot-1.png&quot;
+        srcset=&quot;/static/23c5ae3b497c73e0aabaecbe8f956ae2/c26ae/my-neighbor-cats-screenshot-1.png 158w,
+/static/23c5ae3b497c73e0aabaecbe8f956ae2/6bdcf/my-neighbor-cats-screenshot-1.png 315w,
+/static/23c5ae3b497c73e0aabaecbe8f956ae2/f058b/my-neighbor-cats-screenshot-1.png 630w,
+/static/23c5ae3b497c73e0aabaecbe8f956ae2/40601/my-neighbor-cats-screenshot-1.png 945w,
+/static/23c5ae3b497c73e0aabaecbe8f956ae2/89048/my-neighbor-cats-screenshot-1.png 1242w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/2060dab1402d7b714668674a236acb99/89048/my-neighbor-cats-screenshot-2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 177.8481012658228%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAkCAYAAACJ8xqgAAAACXBIWXMAAAsTAAALEwEAmpwYAAAHpklEQVRIx52Wa3BU5RnHz272cq57zu45e8vuJtlN2HBTquAFUjUDWBFRKbREQSAQSQiQEEggCZcYCMgtEGmAgJd6aTv2gx9a27FUZ+pMsWpJiLTWsR/owId6IahYEyQBya9zTqjDFGtnfGb+s8/zvvv+n+uceYTz58/z2Wef8cknn3DmzBlOnz6NfWbbQ4OD2DI8PHwdrj2/VgT7oY2+vj56e3vp7u52HNj24NAQ/0v+m+hrwgsXLtDf38/AwACDg4MO+gf66f/iC7781+cM9vczODDApYtfcvnyZez/X7x40dG/CQLfIkOnTsHZs3z10ccMn//cObPJhr/ljVC1vIrK5ZVUVl2Foy9zdPtuWVUlW1qaOdCxg9bNzWxsaqCudhWra1awbk3NCOpqaFxTS3NDHYIgCPw/yKKbbDpGUV4UyZ/jnPlcAqpXQPMJqH6BoOgmrPoQ/LIPv9+Hz+/F1kXFj0/y4RNHIIp+cjxuJk28gUk3jUPXFUK6SszUSEZ08iNB8uMmmVyLokQEwePLIec/EK+BPwe3102O143H4+LuqVOYMGEcougjoEpYukzc0khZOvmxEHnRIHlhA8Eh8l8lsXWb5Oqv22MT5uDKEUil4uTnJ5ElEUUWMXWJmKmOEEaDTrTpWAjBJvLYsElsgmtxNUKXWyCga0SiFqomI0o+ggGJSFAmYQVIhnUnwkzcQnD57AcuXDlX4XI5th217cTtcV2N1oVhaCiK5KStKRJhQxlJO2o40RXETAQzrGKFVQKGhGEp6EEFRRPxyV4n5RG4nNR1XUOU/EgOoUg4qHydakE0xJhMLoIVVohEVHJTBnkFQbLZMMmUgWnJGKZC0FTQTQU1ICFJ4shE+LzIkp9QQCYZDlAQCzE6nWBMURJBlLwYhkwkEkAPisSSGpZlO1HIyws65LFogHTGIpEMEk8YhEwVw1AIOo3RKEiEScVN8nJNBEn2E43pBDQRXZcImQqaKmKGZAy78BEd01QJR1TiSYNUvkG6MER2dJji4gjFo6IUFlhkMzGymTiCLPvRDRlZ9BE0VDRVQtMkwhEdVZFI5ZmkCyPouowRlAnoEsGQQjQ3QDiiUVhkcvOt+UyclEcmHUWwa+L1eNA1GSsUIBCQkSQ/qioRMjTyUzHyC6KOnUiZjiMtIGFaGiFLJRLRyI7PZdSYMOPHJRHsxx6PB1kWCWgKfr8Xr9fjFN++K0jFiUUtitMpbv1eFkUVnWhDIZV4IkgkqjtlyWRMJt2WQVBkv9MxG37fCJndRU2V0TSZdDLCjKkl3Ft6CyWTxjv3AUN2ShELG1gh3YmyIBPk9pJim1Ak4KSg4Be9eDw5zpyFDJVUboSZpbfSULWIp/ZvZ3ppycjXRxbJL7RIFZiki6Jki2OMG5ugtOQGBHvOork6ZkRBkn3EoxYxSycW1ikuzKfqkdlsaXiUV3/9c0YXFyHJXiTJRziuks6GKSqMUTw6lztLbmT2D6Yg2ERaQERWRHw+D+OyaW4cW8SYojyWLJjDkx1beeWXXWxuXOUMtt3Z3KRBQZFF0ZgYY8ckGD8hxYy7b2P+g9Ptpnixh1vW/I5nu9uJ3DCF6QQ7H2vg2O9f4sUXDmMYKtGITjCoksoLMSobo3BUjO9PLubmmzIsnf8AFWWzEOz5sztrd9TnzSFbmKK87AEqF83j2a52Xn7xKVavrkBwCZjBAHpAwQprzmzeMK6Ah+8tZda0yWyqr6RheTmC2+3C43Hj99vN8DJz2hT2tTXy3IGd7NnWxJJH7qd1Qx1erxtR9OJ2C/ilHKyoSiyiU3rLjayvXMhLT3eybuVShEx+nFHpBMm4ha2vqV5E555WNq+tZFNdBdPunMj6FeUsmnc/d0yeyLS7bufBe+5izszpPDx3FtWL59G5fSO/evYQe1rXI1QsmMPKpQ+zoryMFUseYl1NBa2NtbQ21tDWVMum+mo2rqmiY1szXXu38tQTj3N43zae3L+D57r28vyRDg62t9G5u5Xnu/Yi2GSrKhZQV7WIjWuWs6l+BY+tr2Frcy1tzbU01VU5dvvWJn6y6zG69rZxpGMHPz3YzpH9O3nmYDvPHmrnZ4c7eOFwB0LtsgXUV5ezflWFg8baSieqLY0raamvpm75IlrWraRzV4sT2RM7NnN433ae7tzNob3beebA7hGyrg5+8WQnQtXCudioWfoQK5eUsXzxj1m19CFql82nekmZU4611eU01lTQ0rCStg117G5dz6H2NvbvaGH/zhb2bdtAx+Ob6NzVijD7nhLmzLiDebNKmXdfKWX3T+WRuTNYXHYfi8tmMf+HM6hcOIfq8h85jtZWLaS+ejHNq5fRVFdJU+2jbK6vdrClcRXC0Vde5tWjv+G1o7/l9dd+x7HXX+PNY69z/K1jdL91jDf/+Ad63n6DE39+g97jf+Jk91uc7Hmbv/Ye592TPbz7Tjfv/eUE753s4e9/e+fbl6XvIoK9xtl7YU9Pj7Mbnujp4Z8ffMDAxx/R332c/vffZ+DECQZ6e+n/xykGursZ+PBDvhoe5sqVK9dBuHTpkrNcnjt3jrNnz3Kur8/ZF4eGhhj69NMR2Nvs+fMj6OtzNtvhka3z+g32O+dmk31Dyv8GN9T7lUX8cJ8AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;스크린샷-2&quot;
+        title=&quot;스크린샷-2&quot;
+        src=&quot;/static/2060dab1402d7b714668674a236acb99/f058b/my-neighbor-cats-screenshot-2.png&quot;
+        srcset=&quot;/static/2060dab1402d7b714668674a236acb99/c26ae/my-neighbor-cats-screenshot-2.png 158w,
+/static/2060dab1402d7b714668674a236acb99/6bdcf/my-neighbor-cats-screenshot-2.png 315w,
+/static/2060dab1402d7b714668674a236acb99/f058b/my-neighbor-cats-screenshot-2.png 630w,
+/static/2060dab1402d7b714668674a236acb99/40601/my-neighbor-cats-screenshot-2.png 945w,
+/static/2060dab1402d7b714668674a236acb99/89048/my-neighbor-cats-screenshot-2.png 1242w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;em&gt;그런데 넌 왜 고양이가 아닌 거니…&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;발표는 잘 진행되었다. W, K와 공동 편집한 발표 자료를 가지고 데모도 간단히 잘 보여주고, 처음 설계와 달라진 점들, 또 그동안 작업을 하면서 삽질했던 내용들을 소개했다. 그리고, 테스트하면서 발견한 치명적인 결함도 소개했다.&lt;/p&gt;
+&lt;p&gt;“이거, 이 문제 해결 안 되면 사업 접어야 해요!”&lt;/p&gt;
+&lt;p&gt;미키의 이 말에 다들 즐거워(?)했다. 아이폰 사파리에서 실행되는 웹 앱의 경우, 사진을 업로드하면 사진 안에 있는 위치 정보가 삭제되는 문제가 있었던 것인데, 개인정보 보호 이슈 때문에 브라우저에서 강제로 그렇게 하는 모양이었다. 그런데 위치 정보가 없으면 동네 지도에 표시를 할 수 없으니 이 서비스 자체가 구성될 수 없었다.&lt;/p&gt;
+&lt;p&gt;하여튼 이런저런 이슈들과 향후의 과제 등에 대해서도 소개하였고, 프로젝트 처음 시작할 때의 주제 발표 시간에 그랬던 것처럼 많은 관심과 뜨거운 반응을 얻었다. 발표 후에 자료를 이메일로 공유했을 때도 AWS SA 분들이 다들 감사 인사와 함께 열렬히 추가 정보 - 위치 정보 삭제 문제에 대한 해법도 포함해서! - 를 제공해주셔서 미키는 정말 고마운 마음이 들었다. 어찌 보면 별 거 아닌 데모 프로젝트, 혹은 실습 과제 정도일 뿐이지만 그냥 이렇게 끝내고 말기에는 너무 아깝다는 생각이 들었다. 뭐라도 흔적을 남겨야겠어. 가령, 하다못해 블로그 글 한 편이라도… 제목은 뭘로 할까? “본격 웹 개발 프로젝트: 우리 동네 고양이” 이런 건 어때. 아냐, 너무 거창해, 하나도 본격적이지 않은데. 그냥 “우리 동네 고양이”가 좋겠어. 단순하고, 아름답고, 완벽해. 미키는 괜시리 마음이 설레었다.&lt;/p&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/bf964baa6bd70be1e9095323e7240b44/a0730/my-neighbor-cats-arch-v1.2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 62.0253164556962%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAACNElEQVQoz3WTS2/TUBCF/TdZwYY/gpDYsGUDYlMhECCBQEBB5aGqRRSV0pZGbZpX83QS104cXz9i38eHrkPSosKRRrZmPHPPPXPsGGPQWmPx7MMXXj1YQ9y4yeDtO86F4H+wfRbz2KN++JpWZZ1R8zOOLSilymKl3mR3c5vh46dMTmuINMUohSwKBsM+nu/hjcekSbIanEZD2kcvCdofyc+/4thkURRIKVm8SzLLANDGYLNSKZqjKoEYX2GaRGPqh2/o1z4hw32cQkqy+bwsxllMkguM0mitMFJBIDC5JCtSMqlRboX51EUkGXEcL48GI8twhIgZuCNkoRh4PWrdE2QuydHEp10G1+4S71RJtSS3Pa0totYe/bGPmM0Yz0Ia3qica0c7ruvS7nQwRjOdhrQ7A9I0W+gziTleW0f0vcUirCSNLebdfWZpXuZ2G1W2To5Wi3LCMCRJklKnWMz49f42eeKhwhG6tbnSamPvjMYoAhRotcr7vl8uaglHKonVUUnJLJzyY/M5UehDFpJ2D6jX6qAljzYO2D11OWvWaJ21/7KOxdJ6TnkPtD0XiSGYCrJssSSbE0IgpWKeCLJE4AcBQRD8EcCUTtD6wsvOcfsF+91tppUdJtXa0rXlB1bXJRPbeIkQ0bxAFBKjJFoVFxquf7vOk51btB/eoXLvPsWC/+o6l5/LsPjpRVQmKVnoE447Kx87vvudKNhj6A4ZdDpXmv8VFiKKyNK09GK/1yt/DjvwN8kjkazoDDa0AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;changed-architecture&quot;
+        title=&quot;changed-architecture&quot;
+        src=&quot;/static/bf964baa6bd70be1e9095323e7240b44/f058b/my-neighbor-cats-arch-v1.2.png&quot;
+        srcset=&quot;/static/bf964baa6bd70be1e9095323e7240b44/c26ae/my-neighbor-cats-arch-v1.2.png 158w,
+/static/bf964baa6bd70be1e9095323e7240b44/6bdcf/my-neighbor-cats-arch-v1.2.png 315w,
+/static/bf964baa6bd70be1e9095323e7240b44/f058b/my-neighbor-cats-arch-v1.2.png 630w,
+/static/bf964baa6bd70be1e9095323e7240b44/40601/my-neighbor-cats-arch-v1.2.png 945w,
+/static/bf964baa6bd70be1e9095323e7240b44/a0730/my-neighbor-cats-arch-v1.2.png 1131w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;em&gt;프로젝트 구조 - 구현하면서 달라진 설계&lt;/em&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;p&gt;*&lt;/p&gt;
+&lt;p&gt;이제 해가 뉘엿뉘엿 넘어가고 있다. 오늘도 좋은 날이었다. 더운 열기는 여전하지만 그 사이로 한줄기 시원한 바람이 지나갈 때가 있다. 어느 새, 계절이 모습을 바꾸고 있는 게 느껴진다.
+저쪽에서 누가 오고 있다. 지난 번 이후로 종종 찾아오던 싱거운 휴먼, 미키다. 이젠 내 친구라도 된다는 듯이 씩 웃으면서 사뭇 당당하게 휴대폰을 꺼낸다. 약간 어이가 없다. 딴 데로 자리를 옮겨야겠다.&lt;/p&gt;
+&lt;p&gt;“어…”&lt;/p&gt;
+&lt;p&gt;미키는 좀 당황하는 것 같다. 알 게 뭐람.&lt;/p&gt;
+&lt;p&gt;“바둑아, 고마워! 잘 지내~!”&lt;/p&gt;
+&lt;p&gt;도대체 뭐래는 거야. 울타리 위로 뛰어올랐다. 사뿐사뿐 동네 산책이나 하고 와야겠다. 어디선가 좋은 냄새가 난다.&lt;/p&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;em&gt;The End&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/7f086c6c218065601763f4b468341578/212bf/cat-back.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 133.54430379746836%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAbABQDASIAAhEBAxEB/8QAGQAAAwADAAAAAAAAAAAAAAAAAAMFAQIE/8QAFwEBAQEBAAAAAAAAAAAAAAAAAQACA//aAAwDAQACEAMQAAABVx1EcnYwAqpKXoYJK//EAB0QAAICAgMBAAAAAAAAAAAAAAECABEQEwMSISL/2gAIAQEAAQUCHWMvpNYtNjEXsqKOOimCfqf/xAAXEQADAQAAAAAAAAAAAAAAAAAAEBEh/9oACAEDAQE/AYYVf//EABcRAAMBAAAAAAAAAAAAAAAAAAABEBH/2gAIAQIBAT8BRl//xAAaEAACAwEBAAAAAAAAAAAAAAABEQAQMRIh/9oACAEBAAY/AshmUiWaxmdIdLZ7Sr//xAAcEAEAAwADAQEAAAAAAAAAAAABABEhMUFhcVH/2gAIAQEAAT8h7VZMY4uZq6dxPYl8Ai8RfH8CmEvLK1TXImaH2C79jFC1Gf/aAAwDAQACAAMAAAAQ58l+/8QAGhEAAgIDAAAAAAAAAAAAAAAAABEBECFBUf/aAAgBAwEBPxBY2LojBV//xAAYEQADAQEAAAAAAAAAAAAAAAAAAREhMf/aAAgBAgEBPxBoyRZwh//EACAQAQACAgIBBQAAAAAAAAAAAAEAESExQVFhcYGRwfD/2gAIAQEAAT8QwgDanSxK1KE9JeG0ab4+pQCC++PiYYkt0JbEBXcx1g1YeWuWGWmFQ1HGj2hnStKmOFf6yqktgxOM8T//2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;뒷모습-고양이&quot;
+        title=&quot;뒷모습-고양이&quot;
+        src=&quot;/static/7f086c6c218065601763f4b468341578/828fb/cat-back.jpg&quot;
+        srcset=&quot;/static/7f086c6c218065601763f4b468341578/ff44c/cat-back.jpg 158w,
+/static/7f086c6c218065601763f4b468341578/a6688/cat-back.jpg 315w,
+/static/7f086c6c218065601763f4b468341578/828fb/cat-back.jpg 630w,
+/static/7f086c6c218065601763f4b468341578/212bf/cat-back.jpg 768w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;Links&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/hnc-jihoon/my-neighbor-cats&quot;&gt;우리 동네 고양이 프로젝트 저장소&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Thank you&lt;/h4&gt;
+&lt;p&gt;&lt;em&gt;함께 프로젝트에 참여해준 &lt;a href=&quot;https://github.com/hnc-kaisin&quot;&gt;W님&lt;/a&gt;과 &lt;a href=&quot;https://github.com/hnc-keonwookim&quot;&gt;K님&lt;/a&gt;에게 감사의 인사를 전합니다.&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;이 글은 아직 공사중인 다른 블로그 사이트에 먼저 쓴 글입니다. 그 사이트가 공개되면 출처를 남기겠습니다.&lt;/em&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[우리 동네 고양이 - part 2]]></title><description><![CDATA[(이전 글: 우리 동네 고양이 - part…]]></description><link>https://jihoon-ernesto.github.io/my-neighbor-cats-part2/</link><guid isPermaLink="false">https://jihoon-ernesto.github.io/my-neighbor-cats-part2/</guid><pubDate>Thu, 25 Nov 2021 10:40:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;(이전 글: &lt;a href=&quot;../my-neighbor-cats-part1/&quot;&gt;우리 동네 고양이 - part 1&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;“내 이럴 줄 알았어…”&lt;/p&gt;
+&lt;p&gt;미키는 집에서 야근 중이다. 재택 근무의 장점은 작업의 흐름을 끊지 않고 쭉 이어서 밤까지 달릴 수 있다는 점이다. &lt;del&gt;(장점 맞지?)&lt;/del&gt; 물론 거기에 식구들의 원성과 미안한 마음을 보너스로 곁들인… 그래도 오늘은 이것까지는 해야만 할 것 같다. 프론트엔드와 백엔드를 연결해서, 서버로부터 받아온 데이터를 가지고 화면에 보여주도록 할 단계이다. 서버가 보내줄 데이터도 아직은 샘플 이미지에 불과하지만, 그래도 이만큼은 해놔야 고맙게도 백엔드 작업을 척하니 해결해준 W에 대한 응답이 될 수 있을 것이었다.&lt;/p&gt;
+&lt;p&gt;무식하면 용감하다고, 백엔드를 잘 몰랐던 미키는 그냥 뭐, 해야 하면 어떻게든 대충 만들면 되겠지 하는 생각이었다. 그런데 W가 작업해준 DynamoDB와 Lambda 내용을 보니 그게 아니었다는 생각이 들었다. 분량이 많은 것은 아니었지만, 미키 혼자 맨땅에 헤딩하면서 했으면 많이 고생했을 것 같았다. 딱 적절한 타이밍에 DB 기초 설계와 API 처리 코드가 준비되어서 다행이었다. 자, 이제 내 차례군, 나만 잘 하면 돼. 미키는 생각했다. 그러니 연동만 잘 하면 되는데, 그래 이런 게 한번에 될 리가 없지. 미키는 그럴 줄 알았다는 듯 고개를 좌우로 흔들었다.&lt;/p&gt;
+&lt;p&gt;AWS에 대해서 모를 때는, 그저 물리적인 서버를 가상으로 만들어주는 서비스 정도로만 생각했다. 하지만 알고 보니 그건 단지 전체 AWS 서비스의 일부분일 뿐이었고(EC2 라는 이름이었다), AWS 안에는 정말 수백 가지의 서비스가 다양한 요구사항에 맞도록 만들어져 있었다. 그리고 그 서비스들은 또 수많은 옵션과 설정값에 따라 동작 방식을 다르게 만들 수 있어서, 잘 모르고 들어갔다가는 너무 많은 선택지들 사이에서 길을 잃게 되기 십상이었다. 미키가 바로 지금 그렇게 허우적거리고 있는 중이었다.&lt;/p&gt;
+&lt;p&gt;“왜 대답이 없니, 왜. 콜을 했으면 대답을 해야 할 것 아니니…”&lt;/p&gt;
+&lt;p&gt;AWS Amplify 서비스를 이용해서 전반적인 구성을 하였고, DynamoDB와 Lambda, 그리고 그 앞의 API Gateway가 백엔드의 주요 축이었다. 프론트엔드 쪽에서 고양이 목록 정보를 요청하면 API Gateway가 요청을 받고 serverless Lambda 함수가 실행되어 DynamoDB에 저장된 정보를 훑어서 사진의 URL 등을 모아서 보내주는 식이었다. 고양이 사진들은 S3 버킷에 미리 몇 장 올려둔 상태였다. 그런데 프론트엔드의 POST 메시지에 제대로 응답이 돌아오지 않는 게 문제였다.&lt;/p&gt;
+&lt;p&gt;사실 이런 건 잘 되어야 하는 일이었다. 오리는 꽥꽥. 돼지는 꿀꿀. 요청에는… 무응답? 잘 될 때는 쉽고 자연스럽고 당연한 것이지만, 안 될 때는 또 그만큼 답답하다. 제대로 된 응답이 만들어지기까지의 여러 과정 중에서 하나만 삐끗해도 실패하는 것이기에 여기저기 다 찔러봐야 하고, 때로는 어디 가서 물어보기에도 좀 창피한 경우도 있고 그렇다.&lt;/p&gt;
+&lt;p&gt;결국 미키는 그 밤을 활활… 까지는 아니지만 살짝 불살라야만 했다. CloudWatch 들어가서 로그도 살펴보고, Lambda 서비스 안에 있는 테스트도 돌려보고, API Gateway 쪽에 있는 테스트도 점검해보면서. 결국 API Gateway의 Lambda Proxy 설정을 조정하고, Lambda 함수에서 생성하는 응답을 json 형식으로 묶어주고, 숫자 형식으로 다루던 위도/경도 값을 문자열 형식으로 전달해주도록 바꾸는 등의 작업을 한 다음에야 비로소 원하는 결과를  볼 수 있었다. 이제 드디어, 참새는 짹짹. 요청에는 응답.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/c56c2b9ce791bc72c8bacd8c6f6e40c6/e0c5a/cat-on-the-rock.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 74.68354430379746%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMBAgT/xAAWAQEBAQAAAAAAAAAAAAAAAAABAAL/2gAMAwEAAhADEAAAASFaiQVMH//EABsQAAIBBQAAAAAAAAAAAAAAAAECEQADEiEx/9oACAEBAAEFApFKQWKyV5lNtn3/AP/EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABYRAQEBAAAAAAAAAAAAAAAAAAABEv/aAAgBAgEBPwGNP//EABoQAAICAwAAAAAAAAAAAAAAAAABITECEUH/2gAIAQEABj8CIsolbHl1EH//xAAaEAEAAgMBAAAAAAAAAAAAAAABABEhMYFB/9oACAEBAAE/IXweRFTSllww6r2RAVUWYij0HOp//9oADAMBAAIAAwAAABD0/wD/xAAWEQEBAQAAAAAAAAAAAAAAAAAAARH/2gAIAQMBAT8Qta//xAAXEQEBAQEAAAAAAAAAAAAAAAABEQAx/9oACAECAQE/EBS5F5v/xAAdEAEAAgMAAwEAAAAAAAAAAAABESEAMUFRkaHw/9oACAEBAAE/EI2jwt4zGi4iT8bxFAM3B33kqFyFudcic1iDSTcfMWzIoF3fc//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;바위-고양이&quot;
+        title=&quot;바위-고양이&quot;
+        src=&quot;/static/c56c2b9ce791bc72c8bacd8c6f6e40c6/828fb/cat-on-the-rock.jpg&quot;
+        srcset=&quot;/static/c56c2b9ce791bc72c8bacd8c6f6e40c6/ff44c/cat-on-the-rock.jpg 158w,
+/static/c56c2b9ce791bc72c8bacd8c6f6e40c6/a6688/cat-on-the-rock.jpg 315w,
+/static/c56c2b9ce791bc72c8bacd8c6f6e40c6/828fb/cat-on-the-rock.jpg 630w,
+/static/c56c2b9ce791bc72c8bacd8c6f6e40c6/0ede0/cat-on-the-rock.jpg 945w,
+/static/c56c2b9ce791bc72c8bacd8c6f6e40c6/3ac88/cat-on-the-rock.jpg 1260w,
+/static/c56c2b9ce791bc72c8bacd8c6f6e40c6/e0c5a/cat-on-the-rock.jpg 2049w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;미키는 그 다음에도 몇 개의 징검다리를 더 건너야 했다. K가 작업해준 Cognito를 통한 사용자 sign up/sign in 프로세스를 붙이는 일도 했다. 회원 가입과 로그인 처리하는 걸 직접 만들려면 상당히 품이 많이 드는 일일 텐데, Cognito 이용하니 비교적 쉽게 그런 걸 할 수 있었다. 그래, 이런 서비스를 다 갖추어놓았으니 AWS가 돈을 버는 것이겠지.&lt;/p&gt;
+&lt;p&gt;고양이 사진에 들어있는 위치 정보를 뽑아내는 일도 필요했다. 그 일을 해주는 파이썬 라이브러리를 어렵지 않게 찾을 수 있었는데, 문제는 그걸 Lambda 함수에서 실행하는 문제였다. 뒷골목 돌 때마다 마주치게 되는 dependency 문제.&lt;/p&gt;
+&lt;p&gt;파이썬을 잘 모르는 미키였지만 - 어릴 때 본 책에 나온 ‘왕뱀 퓌톤’ 이란 명칭을 떠올리며 싱겁게 웃기나 하는 정도였다 - 어쨌든 필요한 라이브러리들을 끼워넣어야 했다. 뭐가 없네, 또 뭐가 없네, 하는 에러 메시지들마다 적당히 끼워 맞춰서 의존성 문제를 해결하는 중이었는데, PIL이라는 라이브러리가 문제였다.&lt;/p&gt;
+&lt;p&gt;이미지 처리를 위해서 쓰는 라이브러리인가본데, 요즘은 그걸 fork한 pillow 라는 걸 쓰는 모양이었다. 근데 그걸 &lt;code class=&quot;language-text&quot;&gt;pipenv install&lt;/code&gt; 해서는 설치가 잘 안 되고 뭔가 다른 방법으로 해야 하는 것 같았는데, 구글링해보니 어떤 용자가 Lambda Layer 들을 미리 만들어서 그 ARN(Amazon Resource Name)을 공개해놓은 것이 있었다. 그러니까 내가 원하는 라이브러리를 갖고 있는 Lambda Layer를 내 Lambda 함수 아랫단에 끼워넣으면 의존성이 해결되는 것이었다. 여러 개의 Lambda 함수에서 공통으로 사용할 코드를 Layer로 만들면 된다고 배웠는데, 이런 식으로도 사용할 수 있는 것이었군. 어쨌든 방법을 찾아서 다행이다, 미키는 한숨 돌리며 생각했다.&lt;/p&gt;
+&lt;p&gt;그런데 꼭 이렇게밖에 할 수 없는 걸까? AWS에서 파이썬 쓰는 게 썩 부드럽지는 않군. 미키는 엊그제 개발환경으로 Cloud9을 써볼까 싶어서 한번 시도해봤었는데, 거기서도 파이썬 버전 문제 때문에 그만둔 적이 있었기 때문이다. Lambda 함수에서 생성할 때 기본 지정되는 파이썬 런타임의 버전은 3.8인데, Cloud9에서 t3 AMI(Amazon Machine Image) 지정해서 인스턴스를 생성하면 파이썬 3.7이 들어 있다. 버전을 올려서 사용하고 싶으면 수동 설치하면 되긴 된다는데, 그러려면 먼저 인스턴스의 디스크 용량을 확장해야 한단다. 으… 미키는 거기까지 해보다가 귀찮아서 포기했다.&lt;/p&gt;
+&lt;p&gt;사실 Cloud9을 쓰게 되면 브라우저 상에서 코딩을 하게 될 텐데, 데스크탑 VS Code의 친숙함에 익숙해진 상태에서 브라우저 환경을 잘 쓰게 될지도 미지수인 상황이었다. 게다가 파이썬 버전을 맞추기 위해 이런 귀찮은 일까지 해야 한다면, 그다지 매력은 없었다. 어떤 서비스를 쓰든 동일한 버전을 사용할 수 있도록 AWS 쪽에서 일괄적으로 관리를 해주어야 불편함 없이 쓸 수 있을 것이었다. 하지만, 개발 언어로서 ‘왕뱀 퓌톤’은 나름 매력적인 간결함을 가지고 있는 것 같았다. 다음에 또 기회가 되면 좀 더 배워서 써봐야겠다고 미키는 생각했다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/62b3ed75348059f39861f4cbade78ea1/e0c5a/cat-on-the-grass.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 74.68354430379746%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAQACA//EABUBAQEAAAAAAAAAAAAAAAAAAAAD/9oADAMBAAIQAxAAAAHsO4CY/8QAFxAAAwEAAAAAAAAAAAAAAAAAAAERAv/aAAgBAQABBQJOq50QhFD/xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAwEBPwGI/8QAFhEBAQEAAAAAAAAAAAAAAAAAABEh/9oACAECAQE/AcR//8QAGhAAAgIDAAAAAAAAAAAAAAAAAAEQMREhgf/aAAgBAQAGPwI08xRS5H//xAAcEAEAAgEFAAAAAAAAAAAAAAABABExECFRYXH/2gAIAQEAAT8hCwhgVONAURylewvFQOp//9oADAMBAAIAAwAAABDjz//EABcRAQEBAQAAAAAAAAAAAAAAAAEAMXH/2gAIAQMBAT8QA5dX/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQARMf/aAAgBAgEBPxAFy1f/xAAcEAEBAAICAwAAAAAAAAAAAAABEQBBIVExgcH/2gAIAQEAAT8QKBO6eO7hCnKLLMDtcHcbA6wKVQlCj7nBzfuZ/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;풀밭-고양이&quot;
+        title=&quot;풀밭-고양이&quot;
+        src=&quot;/static/62b3ed75348059f39861f4cbade78ea1/828fb/cat-on-the-grass.jpg&quot;
+        srcset=&quot;/static/62b3ed75348059f39861f4cbade78ea1/ff44c/cat-on-the-grass.jpg 158w,
+/static/62b3ed75348059f39861f4cbade78ea1/a6688/cat-on-the-grass.jpg 315w,
+/static/62b3ed75348059f39861f4cbade78ea1/828fb/cat-on-the-grass.jpg 630w,
+/static/62b3ed75348059f39861f4cbade78ea1/0ede0/cat-on-the-grass.jpg 945w,
+/static/62b3ed75348059f39861f4cbade78ea1/3ac88/cat-on-the-grass.jpg 1260w,
+/static/62b3ed75348059f39861f4cbade78ea1/e0c5a/cat-on-the-grass.jpg 2049w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;자, 이제 보니 그래도 어느 정도 와꾸(?)는 잡혀가는 것 같았다. 그런데, 계속 이런 식으로 작업해도 되는 걸까? 뭔가 중요한 걸 빠뜨리고 있다는 생각이 미키의 뒤통수를 치고 지나갔다. 이걸 지금 나 혼자 하고 있는 게 아니잖아. 셋이 같이 만들고 있는 건데, 누가 열심히 꾸며놓은 인프라 설정을 다른 사람이 새 작업을 하다가 바꿀 수도 있는 거잖아. 그러다가 누가 또 다시 갑자기 원래대로 돌려놓을 수도 있는 거고. 사실 그건 미키 혼자 작업을 한다 해도 마찬가지였다. 현재의 안정된 세팅 상태를 유지하면서, 동시에 새로운 개발 작업을 하려면 어떻게 해야 하지?&lt;/p&gt;
+&lt;p&gt;말하자면 백엔드의 개발 프로세스를 어느 정도는 제대로 갖춰놓아야 할 필요가 있었다. 실습 시간에 예제 코드 copy &amp;#x26; paste 하면서 인프라 꾸미는 것과는 다른 방식이 필요했다. 하루 이틀 만들어보고 날려버릴 연습문제 푸는 게 아니잖아, 미키는 중얼거렸다. 질문 메일을 써야겠군. 다음 번 Office Hour 때 AWS SA 분들이 와서 답을 해줄 수 있도록 메일을 작성했다.&lt;/p&gt;
+&lt;p&gt;“저기요, 백엔드 인프라 설정을 git 소스 코드에 같이 저장해서 관리하려면 어떻게 해야 하나요? 얼핏 보니 CodeStar 라는 서비스도 있던데 그런 걸 이용하면 할 수 있는 건가요?”&lt;/p&gt;
+&lt;p&gt;물론 미키가 실제로 저렇게 쓴 건 아니었다. 어쨌든 중요한 포인트를 한발 뒤늦게 짚은 것 같았다. 주어진 프로젝트 기한은 이제 중반을 넘어가고 있었다.&lt;/p&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;em&gt;(이어지는 글: &lt;a href=&quot;../my-neighbor-cats-part3/&quot;&gt;우리 동네 고양이 - part 3&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
+&lt;h3&gt;Links&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/keithrozario/Klayers&quot;&gt;Keith’s Layers (Klayers)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;이 글은 아직 공사중인 다른 블로그 사이트에 먼저 쓴 글입니다. 그 사이트가 공개되면 출처를 남기겠습니다.&lt;/em&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[우리 동네 고양이 - part 1]]></title><description><![CDATA[…]]></description><link>https://jihoon-ernesto.github.io/my-neighbor-cats-part1/</link><guid isPermaLink="false">https://jihoon-ernesto.github.io/my-neighbor-cats-part1/</guid><pubDate>Tue, 02 Nov 2021 02:17:00 GMT</pubDate><content:encoded>&lt;p&gt;오늘은 볕이 좋다. 사실은 좋은 정도를 넘어서 너무 쨍하다. 뜨거운 계절 한가운데를 지나고 있는 중이니까. 그나마 한낮의 열기가 살짝 가시고 나니 좀 낫다. 놀이터에는 그네 타는 어린이들, 같이 온 어른들, 산책 나온 노인들, 시끄러운 중고딩들이 늘 자리를 채운다. 어떤 이들은 잠시 지나쳐 가고, 다른 이들은 한참 동안 죽치고 앉아있기도 한다. 아는 얼굴도 있고 모르는 얼굴도 있다. 방금 들른 어떤 아저씨처럼 괜히 친한 척을 하는 사람도 있다.&lt;/p&gt;
+&lt;p&gt;“안녕?”&lt;/p&gt;
+&lt;p&gt;반바지에 파란색 미키마우스 티셔츠를 걸친, 좀 철없어보이는 사내가 말을 건다. 하지만 낯선 이에게 함부로 대답할 일은 아니다. 미키는 부시럭거리며 휴대폰을 꺼내더니 찰칵, 찰칵 소리를 낸다. 그러더니 씨익 한번 웃고는 바이바이 손 한 번 흔들고 겅중겅중 가버린다. 끌끌끌… 휴먼, 너도 참 싱거운 족속이구나. 볕 좋은 바위 위에 한참 앉아있었더니 배가 따땃해졌다. 이제 입에 뭘 좀 넣어볼까? 저만치 떨어진 벤치에는 학교 끝난 아이들이 재잘대며 아이스크림을 먹는 중이다.&lt;/p&gt;
+&lt;p&gt;“야옹아~!”&lt;/p&gt;
+&lt;p&gt;아, 저기 온다. 빨강바지 아주머니가 오늘도 어김없이 먹을 걸 들고 오시는 중이군. ㅎㅎㅎ 이제 슬슬 움직여볼까. 하품 한번 하고, 기지개도 쭉 펴고.&lt;/p&gt;
+&lt;p&gt;*&lt;/p&gt;
+&lt;p&gt;미키는 약간 초조하다. 지금쯤이면 어느 정도 와꾸(?)가 잡혀야 하는데, 여전히 초기 단계에서 헤매고 있다. 어쨌든 뭔가 빈 껍데기라도 눈에 보이는 게 있어야 그 다음 진도를 나갈 수 있을 것 같은데, 썰렁한 지도 한 장 띄우는 것도 그냥 한번에 되는 건 아니었다. 끌끌.&lt;/p&gt;
+&lt;p&gt;그래도 같이 하겠다고 손들어준 W와 K가 있어 다행이었다. 사실 이 주제를 AWS 프로젝트(AWSome Builder Program, ABP라고 불리고 있었다) 그룹 채팅방에 소개했을 때, 약간 걱정이 되기도 했었다. 동네 길고양이 지도 서비스를 만든다고? 거 참 실속없다 얘, 하고 누군가 코웃음칠 것 같았다. 하지만 의외로 반응이 괜찮았다. W는 즉각 합류 의사를 밝혀왔고, K는 별도의 주제를 고민하다가 이쪽에 힘을 보태주기로 했다. 주제 및 설계 초안 발표 모임 전날, K의 설계 스케치 덕분에 미키는 그걸 바탕으로 문서를 완성하고 잘 발표할 수 있었다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/a156f920959bffa7677e44529eddbbd6/7bf07/my-neighbor-cats-arch-v1.1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 70.25316455696203%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAAAsTAAALEwEAmpwYAAAChUlEQVQ4y22TW2/bRhSE+ZeL9rEI+hfyC/qYtmjQIHDgGm2BPqRwKgOSg1QuHFmia5kiKZIr887lXr5iVxegSRcgVjpczpkzMxsAhOuIb1/8yEXSMdm2rsTuxQ+UX3wFSmH5fFlr/F4WIYv3Z/w9PSN/eEvgikmW89ObC35epVxntT+4eXXG8utvwOw/jJI1eZGR5zl93ztIX6/yOx7mryjuf0MVlwTW7l+oUdLuCuwokVJSPD0RRhGDlPR9xz/ZkqxK0cpgjD4BivQjN5PviBcX6N2fBMYYRqXoup5BDlRl4QHkMKDG0bMZhgFR57RD40G01ozj6CGtkZixxKgKq2oCsSt5jGLkqNhuQiYvv6SrM9puoG0auq6jaRrCZEkqEkQhqKrKA5qDHCddgSCOYx4fHzHGkqYx11e/I4feHzgeN9bSNyVD3/ppnExKqQOg9f+PT1DXte/omEg5UpY13TBi2gLu3zIoA2bk5R93TBcJ4d1HhNj5sY8MvQ92TzE40m3bFq0UepQobajzmOT6F8/KGs33v864mt8j8i1N034GeGLoRzKGzgEedDBaU7cdD5sUrQ+uWumTYCy+5pLwfys4utZJyS4Mid+92zupFLLraUzL8+0bRG9g7LFPD76tM8W5f9TSYbjfe4Za4/otz8+ZPXvm3dXGUJUVdV9ysVixiiR9VRCvbpByoCxLVqsVSZKQZRlCCJ+G4Di7v25CEC4Wp6w5BkYbttsUURY+Wrl42gdaCKbTKbPZzO8uLS6zwaei6gO4G8O577R6fX3FKkv/o1VRFFxeXjKZTJjP56zXa187Xb3j/mkDl7vZXx/Ii+LUyC033u3tLcvlks1mQxRF/p7/C4n+LGfwrFiMAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;initial-architecture&quot;
+        title=&quot;initial-architecture&quot;
+        src=&quot;/static/a156f920959bffa7677e44529eddbbd6/f058b/my-neighbor-cats-arch-v1.1.png&quot;
+        srcset=&quot;/static/a156f920959bffa7677e44529eddbbd6/c26ae/my-neighbor-cats-arch-v1.1.png 158w,
+/static/a156f920959bffa7677e44529eddbbd6/6bdcf/my-neighbor-cats-arch-v1.1.png 315w,
+/static/a156f920959bffa7677e44529eddbbd6/f058b/my-neighbor-cats-arch-v1.1.png 630w,
+/static/a156f920959bffa7677e44529eddbbd6/40601/my-neighbor-cats-arch-v1.1.png 945w,
+/static/a156f920959bffa7677e44529eddbbd6/7bf07/my-neighbor-cats-arch-v1.1.png 1128w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;em&gt;‘우리 동네 고양이’ 프로젝트 구조 - 초기 설계&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;발표 모임에서는 여러 가지 제안들도 나왔다. 기본 설계에서 더 보완할 점들(S3 bucket에 이미지 파일을 업로드할 때 API Gateway 거치지 않고 직접 올리는 게 낫다는 것 등)과 함께, 이 서비스가 제대로 만들어진다면 추가될 수 있을 각종 고급 기능들에 대한 아이디어들도 쏟아져 나왔다. 오, 이런 호의적인 반응이라니. 일단 아이디어로는 어그로를 끄는 데 성공한 것 같군. 미키는 안심이 되었다. AWS 솔루션 아키텍트(SA) 분들도 많은 조언을 해주었는데, 특히 S님이 ‘우리 동네 고양이’ 라는 이름이 좋다고 해줘서 고마운 마음이 들었다. 미키가 은근히 신경쓰는 것 중 하나가 이름 짓는 것이었거든. 알아본 사람이 있는지 모르겠지만 프로젝트의 영어 이름 ‘My Neighbor Cats’ 도 미키가 좋아하는 ‘이웃집 토토로’의 영어 제목, ‘My Neighbor Totoro’ 에서 따온 것이었다.&lt;/p&gt;
+&lt;p&gt;그렇게 나름 관심을 받으며 시작한 프로젝트였다. 이제 그 기대에 부응하여 멋진 결과를 보여줘야 할 텐데, 날짜는 하루하루 가고 있고, 아직 제대로 시작은 못하고 있었다. 핑계가 있기는 했다. 이 프로젝트를 비롯하여 여러 참여 팀들의 AWS 계정을 인프라 팀에서 통합 관리해주기로 하였는데 아직 계정이 안 나오고 있었으니. 그래도 그와 상관없이 작업할 수 있는 것들은 미리 해놓아야 하는데…&lt;/p&gt;
+&lt;p&gt;작업 영역은 자연스럽게 나뉜 상황이었다. 프론트엔드 쪽은 미키가, 백엔드 쪽은 W와 K가 나눠서 맡게 되었고, 아무래도 아이디어 제안자인 미키가 주도적으로 전반적인 진행을 끌고 가게 될 것이었다. 약간 불안 요소가 있다면 미키가 AWS에 대해서 그렇게 썩 잘 알고 있지는 못하다는 것이었다. 물론 앞선 몇 개월간 매주 열심히 세미나에 참여하기는 했다. 가끔씩 졸다가도 곧잘 질문도 하고, 실습 시간에도 가이드 따라서 AWS 콘솔 들어가서 클릭, 클릭 열심히 인프라 구성도 해보고 코드 copy &amp;#x26; paste 도 하고 그랬다. 하지만 실습 문서 따라해보는 거랑 직접 만들어보는 거랑은 많이 다를 거라는 건 미키도 이미 예상하고 있었다. 아마도, 거의 확실히, 수많은 삽질을 거쳐야 할 터였다. 그리고 그 삽질은 시작하자마자 시작된 셈이었다.&lt;/p&gt;
+&lt;p&gt;어쩌면 그 삽질은 미키가 자초한 면이 있었다. 백엔드 Lambda 함수에서 사용할 언어는 W, K와 논의해서 파이썬으로 일단 정하였는데, 프론트엔드 기술 세트는 미키 맘대로 정하면 될 상황이었다. 미키는 여기저기 대충 둘러보다가 Next.js와 TypeScript를 쓰기로 했는데, 둘 다 미키로서는 거의 처음 다뤄보는 기술들이었다.&lt;/p&gt;
+&lt;p&gt;“뭐, 어차피 배우자고 하는 실습 프로젝트이니까…”&lt;/p&gt;
+&lt;p&gt;주어진 시간이 많은 편은 아니라서 약간 모험이기는 했다. 익숙한 언어로 한다 해도 예상치 못한 문제들이 튀어나올 텐데, 낯선 기술을 써보겠다고? 하지만 이럴 때 아니면 언제 또 접해보겠나 싶은 생각이 들었다. 혹여 완성을 못한다거나 실패하더라도 큰 위험 부담은 없는 데모 프로젝트이니까. 물론 W와 K에게 미안하고, 다른 사람들 보기에 창피하겠지만. 한편, 그동안 세미나와 이 실습 프로젝트 전체를 관리하던 AWS의 I 님이 당부한 한 마디가 응원의 메시지가 되었다.&lt;/p&gt;
+&lt;p&gt;“개발자분들, 뭐 만들라고 하면 하나하나 다 이해한 다음에 하고 싶어하고 그러시는데요.&lt;br&gt;
+다 필요 없고요. 아무 거나 갖다 쓰고, 일단 돌아가도록 만들어놓고 생각하세요.”&lt;/p&gt;
+&lt;p&gt;미키는 고개를 끄덕였다. 그래, 일단 돌아가는 게 중요하지. 오늘도 지구는 돌고 있고, 세상은 넓고 카피할 코드도 많..을 것이다. 제발 그래야 할 텐데.&lt;/p&gt;
+&lt;p&gt;일차 목표는 Next.js의 기본 샘플 앱에 페이지 하나를 추가하고 그 페이지에 들어가면 지도가 나오게 하는 것. 지도 API는 카카오 것을 쓰기로 바꾸었다. 그냥 느낌으로는 네이버 지도가 더 일반적일 것 같아서 처음 설계에 포함시켰는데, 은근히 덜컹덜컹, 걸리는 것들이 있었다. 이것도 미키의 느낌일 뿐일 수도 있는데, 네이버 클라우드 플랫폼 가입 계정이 있어야만 지도 API를 쓸 수 있다든지 하는 것도 약간 불편했고, 예제 코드들도 뭔가 입맛에 딱 맞는 것이 쉽게 얻어걸리지 않는 느낌이었다. 카카오 지도 API는 기본 계정만 있으면 사용할 수 있고, 문서와 예제도 조금 더 깔끔하게 정리된 느낌이 들었다. 그래, 이걸로 하자. 동네 지도에 마커 표시만 할 수 있으면 아무 지도나 상관은 없었다.&lt;/p&gt;
+&lt;p&gt;코로나19 때문에 집에서 재택근무 중이던 미키는 오후 작업 시간이 거의 끝나서야 겨우겨우 API 대강 엮어서 지도 한 장을 띄울 수 있었다. Next.js 에 들어가 있는 server-side rendering 개념이 아직 좀 낯설기도 했고, TypeScript 코드에서 타입을 명시적으로 지정해주어야 하는 것을 빠뜨려서 자잘한 에러를 만나느라 삽질을 꽤 했다. JavaScript에서 타입 신경 안 쓰고 작업하는 것에 익숙해져서인지, 다시 타입을 꼭꼭 넣어주어야 하는 게 약간은 귀찮기도 했다. 얼핏 보니 ‘any’ 로 지정하면 대충 넘어가는 것 같기에, 미키는 일단 타입은 대강 생략하고 넘겼다. 약간 미안스런 마음이 들었지만 제대로 코드 정리하는 건 차차 해나가면 될 일이었다. I 님의 메시지를 다시 떠올리며 위안을 삼았다. “다 필요 없고요…”&lt;/p&gt;
+&lt;p&gt;API key 같은 것은 코드에 포함되면 안 되니까 .env.local 파일에 넣어놓고, 커밋을 만들어서 PR을 올렸다. 정리도 안 된 코드로 된, 사실상 남의 예제 베낀 수준의 썰렁한 페이지 한 장 넣어놓은 것이지만 작업의 시작을 알릴 필요가 있었다. 이제 여기서부터 덧붙이고 부수고 고치면서 만들어가면 될 것이었다. 뭐가 돼도 되겠지, 미키는 중얼거리며 맥북을 닫았다. 일단 오늘은 여기까지 하자.&lt;/p&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;em&gt;(이어지는 글: &lt;a href=&quot;../my-neighbor-cats-part2/&quot;&gt;우리 동네 고양이 - part 2&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
+&lt;h3&gt;Links&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/hnc-jihoon/my-neighbor-cats/pull/1&quot;&gt;PR #1: Init next.js for frontend and add Kakao map sample&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;이 글은 아직 공사중인 다른 블로그 사이트에 먼저 쓴 글입니다. 그 사이트가 공개되면 출처를 남기겠습니다.&lt;/em&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[나의 얼렁뚱땅 오픈소스 참여기 - part 2]]></title><description><![CDATA[(이전 글: 나의 얼렁뚱땅 오픈소스 참여기 - part…]]></description><link>https://jihoon-ernesto.github.io/my-first-open-source-part2/</link><guid isPermaLink="false">https://jihoon-ernesto.github.io/my-first-open-source-part2/</guid><pubDate>Thu, 07 Oct 2021 09:37:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;(이전 글: &lt;a href=&quot;../my-first-open-source-part1/&quot;&gt;나의 얼렁뚱땅 오픈소스 참여기 - part 1&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
 &lt;br&gt;
 &lt;br&gt;
 &lt;p&gt;사실 이럴 생각까지는 아니었다. 이게 뭐 대단한 얘기라고 글을 두 편이나 나눠 쓰나? 일필휘지로 한달음에 갈겨 쓸 생각이었다. 그런데, 쓰다 보니 흐름상 이쯤에서 한번 끊어줘야겠다는 느낌이 들었다. 실제로도 xterm.js 에 PR 올린 후에 시간적인 단절이 있기도 했고.&lt;/p&gt;
