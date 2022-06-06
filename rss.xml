@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A blog on S/W engineering]]></description><link>https://jihoon-ernesto.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 06 Jun 2022 01:13:39 GMT</lastBuildDate><item><title><![CDATA[우리 동네 고양이 - part 3]]></title><description><![CDATA[(이전 글: 우리 동네 고양이 - part 2) 방법은 멀리 있지 않았다. 미키가 여태까지 쓰고 있던 AWS Amplify를 그대로 쓰면 되는 것이었다. 단, 웹 콘솔이 아니라 CLI 이용해서. “Amplify에서 frontend와 backend…]]></description><link>https://jihoon-ernesto.github.io/my-neighbor-cats-part3/</link><guid isPermaLink="false">https://jihoon-ernesto.github.io/my-neighbor-cats-part3/</guid><pubDate>Tue, 21 Dec 2021 09:25:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;(이전 글: &lt;a href=&quot;../my-neighbor-cats-part2/&quot;&gt;우리 동네 고양이 - part 2&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A blog on S/W engineering]]></description><link>https://jihoon-ernesto.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 06 Jun 2022 03:51:38 GMT</lastBuildDate><item><title><![CDATA[우리 동네 고양이 - part 3]]></title><description><![CDATA[(이전 글: 우리 동네 고양이 - part 2) 방법은 멀리 있지 않았다. 미키가 여태까지 쓰고 있던 AWS Amplify를 그대로 쓰면 되는 것이었다. 단, 웹 콘솔이 아니라 CLI 이용해서. “Amplify에서 frontend와 backend…]]></description><link>https://jihoon-ernesto.github.io/my-neighbor-cats-part3/</link><guid isPermaLink="false">https://jihoon-ernesto.github.io/my-neighbor-cats-part3/</guid><pubDate>Tue, 21 Dec 2021 09:25:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;(이전 글: &lt;a href=&quot;../my-neighbor-cats-part2/&quot;&gt;우리 동네 고양이 - part 2&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
 &lt;br&gt;
 &lt;p&gt;방법은 멀리 있지 않았다. 미키가 여태까지 쓰고 있던 AWS Amplify를 그대로 쓰면 되는 것이었다. 단, 웹 콘솔이 아니라 CLI 이용해서.&lt;/p&gt;
 &lt;p&gt;“Amplify에서 frontend와 backend 연결하는 방법 있는 것 아시잖아요? git 브랜치를 여러 개 만들 수 있듯이 backend 환경을 여러 개 만들 수 있어요. 각각의 backend 환경을 상황에 맞게 알맞은 git 브랜치에 연결해서 사용하면 돼요.”&lt;/p&gt;
@@ -99,46 +99,28 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;em&gt;그런데 넌 왜 고양이가 아닌 거니…&lt;/em&gt;&lt;/p&gt;
+&lt;figure&gt;
+  &lt;figcaption&gt;그런데 넌 왜 고양이가 아닌 거니...&lt;/figcaption&gt;
+&lt;/figure&gt;
 &lt;p&gt;발표는 잘 진행되었다. W, K와 공동 편집한 발표 자료를 가지고 데모도 간단히 잘 보여주고, 처음 설계와 달라진 점들, 또 그동안 작업을 하면서 삽질했던 내용들을 소개했다. 그리고, 테스트하면서 발견한 치명적인 결함도 소개했다.&lt;/p&gt;
 &lt;p&gt;“이거, 이 문제 해결 안 되면 사업 접어야 해요!”&lt;/p&gt;
 &lt;p&gt;미키의 이 말에 다들 즐거워(?)했다. 아이폰 사파리에서 실행되는 웹 앱의 경우, 사진을 업로드하면 사진 안에 있는 위치 정보가 삭제되는 문제가 있었던 것인데, 개인정보 보호 이슈 때문에 브라우저에서 강제로 그렇게 하는 모양이었다. 그런데 위치 정보가 없으면 동네 지도에 표시를 할 수 없으니 이 서비스 자체가 구성될 수 없었다.&lt;/p&gt;
 &lt;p&gt;하여튼 이런저런 이슈들과 향후의 과제 등에 대해서도 소개하였고, 프로젝트 처음 시작할 때의 주제 발표 시간에 그랬던 것처럼 많은 관심과 뜨거운 반응을 얻었다. 발표 후에 자료를 이메일로 공유했을 때도 AWS SA 분들이 다들 감사 인사와 함께 열렬히 추가 정보 - 위치 정보 삭제 문제에 대한 해법도 포함해서! - 를 제공해주셔서 미키는 정말 고마운 마음이 들었다. 어찌 보면 별 거 아닌 데모 프로젝트, 혹은 실습 과제 정도일 뿐이지만 그냥 이렇게 끝내고 말기에는 너무 아깝다는 생각이 들었다. 뭐라도 흔적을 남겨야겠어. 가령, 하다못해 블로그 글 한 편이라도… 제목은 뭘로 할까? “본격 웹 개발 프로젝트: 우리 동네 고양이” 이런 건 어때. 아냐, 너무 거창해, 하나도 본격적이지 않은데. 그냥 “우리 동네 고양이”가 좋겠어. 단순하고, 아름답고, 완벽해. 미키는 괜시리 마음이 설레었다.&lt;/p&gt;
 &lt;br&gt;
 &lt;br&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/bf964baa6bd70be1e9095323e7240b44/a0730/my-neighbor-cats-arch-v1.2.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 62.0253164556962%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAACNElEQVQoz3WTS2/TUBCF/TdZwYY/gpDYsGUDYlMhECCBQEBB5aGqRRSV0pZGbZpX83QS104cXz9i38eHrkPSosKRRrZmPHPPPXPsGGPQWmPx7MMXXj1YQ9y4yeDtO86F4H+wfRbz2KN++JpWZZ1R8zOOLSilymKl3mR3c5vh46dMTmuINMUohSwKBsM+nu/hjcekSbIanEZD2kcvCdofyc+/4thkURRIKVm8SzLLANDGYLNSKZqjKoEYX2GaRGPqh2/o1z4hw32cQkqy+bwsxllMkguM0mitMFJBIDC5JCtSMqlRboX51EUkGXEcL48GI8twhIgZuCNkoRh4PWrdE2QuydHEp10G1+4S71RJtSS3Pa0totYe/bGPmM0Yz0Ia3qica0c7ruvS7nQwRjOdhrQ7A9I0W+gziTleW0f0vcUirCSNLebdfWZpXuZ2G1W2To5Wi3LCMCRJklKnWMz49f42eeKhwhG6tbnSamPvjMYoAhRotcr7vl8uaglHKonVUUnJLJzyY/M5UehDFpJ2D6jX6qAljzYO2D11OWvWaJ21/7KOxdJ6TnkPtD0XiSGYCrJssSSbE0IgpWKeCLJE4AcBQRD8EcCUTtD6wsvOcfsF+91tppUdJtXa0rXlB1bXJRPbeIkQ0bxAFBKjJFoVFxquf7vOk51btB/eoXLvPsWC/+o6l5/LsPjpRVQmKVnoE447Kx87vvudKNhj6A4ZdDpXmv8VFiKKyNK09GK/1yt/DjvwN8kjkazoDDa0AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;changed-architecture&quot;
-        title=&quot;changed-architecture&quot;
-        src=&quot;/static/bf964baa6bd70be1e9095323e7240b44/f058b/my-neighbor-cats-arch-v1.2.png&quot;
-        srcset=&quot;/static/bf964baa6bd70be1e9095323e7240b44/c26ae/my-neighbor-cats-arch-v1.2.png 158w,
-/static/bf964baa6bd70be1e9095323e7240b44/6bdcf/my-neighbor-cats-arch-v1.2.png 315w,
-/static/bf964baa6bd70be1e9095323e7240b44/f058b/my-neighbor-cats-arch-v1.2.png 630w,
-/static/bf964baa6bd70be1e9095323e7240b44/40601/my-neighbor-cats-arch-v1.2.png 945w,
-/static/bf964baa6bd70be1e9095323e7240b44/a0730/my-neighbor-cats-arch-v1.2.png 1131w&quot;
-        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
+&lt;figure&gt;
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/db7e019665a15c0b73d03ac5b1c3daa9/a0730/my-neighbor-cats-arch-v1.2.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 62.0253164556962%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAACNElEQVQoz3WTS2/TQBSF/TdZwYY/gpDYsGUDYlMhECAhdVFaVAlUtVKLSh9qozZNkzRJEycxdux4/Ig9jw+N07pFhSuNxrp37twz5xw7xhi01tj49O0Hq29WEE+eMlr7ym8h+F/YPht54tE8XKV9ssa4/R3HFpRSVbFx2WF/a4fx+4/MLlqILMMohSxLRuMhnu/hTadkaVpfXKRTvM4GubeDCndxbLIsS6SULL8luUUAaGOwWakUnUmTQEwfINVlCOIYklMQJzillOSLRVVM8oS0EBil0VphpIJAYApJXmbkUqPcBovQRaQ5SZIsRxuJVgVGlzhCJIzcCbJUjLxrWoNzZCEp0CQXA0aPXpLsNcm0pJBgutvE3QOGUx8xnzOdR7S9SY3YcV2XXr+PMZowjOj1R2RZXhWzWcLZyjpi6C2FsJS0t1kMjphnRZXbbzfZPj+thXKiKCJN04qnRMw52XhOkXqoaILubtWTNw+uaE9iQIFWdd73/UqoGqFUEsujkpJ5FPJr6zNx5EMekQ2OuWxdgpa82zxm/8LlqtOie9X7yzqVODfWc6p3oO1cJIYgFOT5UiSbE0IgpWKRCvJU4AcBQRDcEGAqJ2h952XnrPeFo8EOYWOPWbN169rqgOX1FoltvAeIeFEiSolRVuHyjsP13cd82HtG7+0LGq9eUy7x18+5v98uG4deTGOWkUc+0bRf+9jx3Z/EwQFjd8yo33/Q/K9lQ8QxeZZVXhxeX1c/h73wD7MWkqkl3HdWAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;changed-architecture&quot; title=&quot;changed-architecture&quot; src=&quot;/static/db7e019665a15c0b73d03ac5b1c3daa9/f058b/my-neighbor-cats-arch-v1.2.png&quot; srcset=&quot;/static/db7e019665a15c0b73d03ac5b1c3daa9/c26ae/my-neighbor-cats-arch-v1.2.png 158w,
+/static/db7e019665a15c0b73d03ac5b1c3daa9/6bdcf/my-neighbor-cats-arch-v1.2.png 315w,
+/static/db7e019665a15c0b73d03ac5b1c3daa9/f058b/my-neighbor-cats-arch-v1.2.png 630w,
+/static/db7e019665a15c0b73d03ac5b1c3daa9/40601/my-neighbor-cats-arch-v1.2.png 945w,
+/static/db7e019665a15c0b73d03ac5b1c3daa9/a0730/my-neighbor-cats-arch-v1.2.png 1131w&quot; sizes=&quot;(max-width: 630px) 100vw, 630px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
   &lt;/a&gt;
     &lt;/span&gt;
-&lt;em&gt;프로젝트 구조 - 구현하면서 달라진 설계&lt;/em&gt;&lt;/p&gt;
+  &lt;figcaption&gt;프로젝트 구조 - 구현하면서 달라진 설계&lt;/figcaption&gt;
+&lt;/figure&gt;
 &lt;br&gt;
 &lt;br&gt;
 &lt;br&gt;
@@ -153,37 +135,17 @@
 &lt;br&gt;
 &lt;br&gt;
 &lt;p&gt;&lt;em&gt;The End&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/7f086c6c218065601763f4b468341578/212bf/cat-back.jpg&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 133.54430379746836%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAbABQDASIAAhEBAxEB/8QAGQAAAwADAAAAAAAAAAAAAAAAAAMFAQIE/8QAFwEBAQEBAAAAAAAAAAAAAAAAAQACA//aAAwDAQACEAMQAAABVx1EcnYwAqpKXoYJK//EAB0QAAICAgMBAAAAAAAAAAAAAAECABEQEwMSISL/2gAIAQEAAQUCHWMvpNYtNjEXsqKOOimCfqf/xAAXEQADAQAAAAAAAAAAAAAAAAAAEBEh/9oACAEDAQE/AYYVf//EABcRAAMBAAAAAAAAAAAAAAAAAAABEBH/2gAIAQIBAT8BRl//xAAaEAACAwEBAAAAAAAAAAAAAAABEQAQMRIh/9oACAEBAAY/AshmUiWaxmdIdLZ7Sr//xAAcEAEAAwADAQEAAAAAAAAAAAABABEhMUFhcVH/2gAIAQEAAT8h7VZMY4uZq6dxPYl8Ai8RfH8CmEvLK1TXImaH2C79jFC1Gf/aAAwDAQACAAMAAAAQ58l+/8QAGhEAAgIDAAAAAAAAAAAAAAAAABEBECFBUf/aAAgBAwEBPxBY2LojBV//xAAYEQADAQEAAAAAAAAAAAAAAAAAAREhMf/aAAgBAgEBPxBoyRZwh//EACAQAQACAgIBBQAAAAAAAAAAAAEAESExQVFhcYGRwfD/2gAIAQEAAT8QwgDanSxK1KE9JeG0ab4+pQCC++PiYYkt0JbEBXcx1g1YeWuWGWmFQ1HGj2hnStKmOFf6yqktgxOM8T//2Q==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;뒷모습-고양이&quot;
-        title=&quot;뒷모습-고양이&quot;
-        src=&quot;/static/7f086c6c218065601763f4b468341578/828fb/cat-back.jpg&quot;
-        srcset=&quot;/static/7f086c6c218065601763f4b468341578/ff44c/cat-back.jpg 158w,
+&lt;figure style=&quot;max-width:320px&quot;&gt;
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/7f086c6c218065601763f4b468341578/212bf/cat-back.jpg&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 133.54430379746836%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAbABQDASIAAhEBAxEB/8QAGQAAAwADAAAAAAAAAAAAAAAAAAMFAQIE/8QAFwEBAQEBAAAAAAAAAAAAAAAAAQACA//aAAwDAQACEAMQAAABVx1EcnYwAqpKXoYJK//EAB0QAAICAgMBAAAAAAAAAAAAAAECABEQEwMSISL/2gAIAQEAAQUCHWMvpNYtNjEXsqKOOimCfqf/xAAXEQADAQAAAAAAAAAAAAAAAAAAEBEh/9oACAEDAQE/AYYVf//EABcRAAMBAAAAAAAAAAAAAAAAAAABEBH/2gAIAQIBAT8BRl//xAAaEAACAwEBAAAAAAAAAAAAAAABEQAQMRIh/9oACAEBAAY/AshmUiWaxmdIdLZ7Sr//xAAcEAEAAwADAQEAAAAAAAAAAAABABEhMUFhcVH/2gAIAQEAAT8h7VZMY4uZq6dxPYl8Ai8RfH8CmEvLK1TXImaH2C79jFC1Gf/aAAwDAQACAAMAAAAQ58l+/8QAGhEAAgIDAAAAAAAAAAAAAAAAABEBECFBUf/aAAgBAwEBPxBY2LojBV//xAAYEQADAQEAAAAAAAAAAAAAAAAAAREhMf/aAAgBAgEBPxBoyRZwh//EACAQAQACAgIBBQAAAAAAAAAAAAEAESExQVFhcYGRwfD/2gAIAQEAAT8QwgDanSxK1KE9JeG0ab4+pQCC++PiYYkt0JbEBXcx1g1YeWuWGWmFQ1HGj2hnStKmOFf6yqktgxOM8T//2Q==&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;뒷모습-고양이&quot; title=&quot;뒷모습-고양이&quot; src=&quot;/static/7f086c6c218065601763f4b468341578/828fb/cat-back.jpg&quot; srcset=&quot;/static/7f086c6c218065601763f4b468341578/ff44c/cat-back.jpg 158w,
 /static/7f086c6c218065601763f4b468341578/a6688/cat-back.jpg 315w,
 /static/7f086c6c218065601763f4b468341578/828fb/cat-back.jpg 630w,
-/static/7f086c6c218065601763f4b468341578/212bf/cat-back.jpg 768w&quot;
-        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
+/static/7f086c6c218065601763f4b468341578/212bf/cat-back.jpg 768w&quot; sizes=&quot;(max-width: 630px) 100vw, 630px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
   &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
+    &lt;/span&gt;
+&lt;/figure&gt;
 &lt;h3&gt;Links&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/hnc-jihoon/my-neighbor-cats&quot;&gt;우리 동네 고양이 프로젝트 저장소&lt;/a&gt;&lt;/li&gt;
@@ -202,78 +164,38 @@
 &lt;p&gt;AWS Amplify 서비스를 이용해서 전반적인 구성을 하였고, DynamoDB와 Lambda, 그리고 그 앞의 API Gateway가 백엔드의 주요 축이었다. 프론트엔드 쪽에서 고양이 목록 정보를 요청하면 API Gateway가 요청을 받고 serverless Lambda 함수가 실행되어 DynamoDB에 저장된 정보를 훑어서 사진의 URL 등을 모아서 보내주는 식이었다. 고양이 사진들은 S3 버킷에 미리 몇 장 올려둔 상태였다. 그런데 프론트엔드의 POST 메시지에 제대로 응답이 돌아오지 않는 게 문제였다.&lt;/p&gt;
 &lt;p&gt;사실 이런 건 잘 되어야 하는 일이었다. 오리는 꽥꽥. 돼지는 꿀꿀. 요청에는… 무응답? 잘 될 때는 쉽고 자연스럽고 당연한 것이지만, 안 될 때는 또 그만큼 답답하다. 제대로 된 응답이 만들어지기까지의 여러 과정 중에서 하나만 삐끗해도 실패하는 것이기에 여기저기 다 찔러봐야 하고, 때로는 어디 가서 물어보기에도 좀 창피한 경우도 있고 그렇다.&lt;/p&gt;
 &lt;p&gt;결국 미키는 그 밤을 활활… 까지는 아니지만 살짝 불살라야만 했다. CloudWatch 들어가서 로그도 살펴보고, Lambda 서비스 안에 있는 테스트도 돌려보고, API Gateway 쪽에 있는 테스트도 점검해보면서. 결국 API Gateway의 Lambda Proxy 설정을 조정하고, Lambda 함수에서 생성하는 응답을 json 형식으로 묶어주고, 숫자 형식으로 다루던 위도/경도 값을 문자열 형식으로 전달해주도록 바꾸는 등의 작업을 한 다음에야 비로소 원하는 결과를  볼 수 있었다. 이제 드디어, 참새는 짹짹. 요청에는 응답.&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/c56c2b9ce791bc72c8bacd8c6f6e40c6/e0c5a/cat-on-the-rock.jpg&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 74.68354430379746%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMBAgT/xAAWAQEBAQAAAAAAAAAAAAAAAAABAAL/2gAMAwEAAhADEAAAASFaiQVMH//EABsQAAIBBQAAAAAAAAAAAAAAAAECEQADEiEx/9oACAEBAAEFApFKQWKyV5lNtn3/AP/EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABYRAQEBAAAAAAAAAAAAAAAAAAABEv/aAAgBAgEBPwGNP//EABoQAAICAwAAAAAAAAAAAAAAAAABITECEUH/2gAIAQEABj8CIsolbHl1EH//xAAaEAEAAgMBAAAAAAAAAAAAAAABABEhMYFB/9oACAEBAAE/IXweRFTSllww6r2RAVUWYij0HOp//9oADAMBAAIAAwAAABD0/wD/xAAWEQEBAQAAAAAAAAAAAAAAAAAAARH/2gAIAQMBAT8Qta//xAAXEQEBAQEAAAAAAAAAAAAAAAABEQAx/9oACAECAQE/EBS5F5v/xAAdEAEAAgMAAwEAAAAAAAAAAAABESEAMUFRkaHw/9oACAEBAAE/EI2jwt4zGi4iT8bxFAM3B33kqFyFudcic1iDSTcfMWzIoF3fc//Z&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;바위-고양이&quot;
-        title=&quot;바위-고양이&quot;
-        src=&quot;/static/c56c2b9ce791bc72c8bacd8c6f6e40c6/828fb/cat-on-the-rock.jpg&quot;
-        srcset=&quot;/static/c56c2b9ce791bc72c8bacd8c6f6e40c6/ff44c/cat-on-the-rock.jpg 158w,
+&lt;figure style=&quot;max-width:500px&quot;&gt;
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/c56c2b9ce791bc72c8bacd8c6f6e40c6/e0c5a/cat-on-the-rock.jpg&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 74.68354430379746%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMBAgT/xAAWAQEBAQAAAAAAAAAAAAAAAAABAAL/2gAMAwEAAhADEAAAASFaiQVMH//EABsQAAIBBQAAAAAAAAAAAAAAAAECEQADEiEx/9oACAEBAAEFApFKQWKyV5lNtn3/AP/EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABYRAQEBAAAAAAAAAAAAAAAAAAABEv/aAAgBAgEBPwGNP//EABoQAAICAwAAAAAAAAAAAAAAAAABITECEUH/2gAIAQEABj8CIsolbHl1EH//xAAaEAEAAgMBAAAAAAAAAAAAAAABABEhMYFB/9oACAEBAAE/IXweRFTSllww6r2RAVUWYij0HOp//9oADAMBAAIAAwAAABD0/wD/xAAWEQEBAQAAAAAAAAAAAAAAAAAAARH/2gAIAQMBAT8Qta//xAAXEQEBAQEAAAAAAAAAAAAAAAABEQAx/9oACAECAQE/EBS5F5v/xAAdEAEAAgMAAwEAAAAAAAAAAAABESEAMUFRkaHw/9oACAEBAAE/EI2jwt4zGi4iT8bxFAM3B33kqFyFudcic1iDSTcfMWzIoF3fc//Z&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;바위-고양이&quot; title=&quot;바위-고양이&quot; src=&quot;/static/c56c2b9ce791bc72c8bacd8c6f6e40c6/828fb/cat-on-the-rock.jpg&quot; srcset=&quot;/static/c56c2b9ce791bc72c8bacd8c6f6e40c6/ff44c/cat-on-the-rock.jpg 158w,
 /static/c56c2b9ce791bc72c8bacd8c6f6e40c6/a6688/cat-on-the-rock.jpg 315w,
 /static/c56c2b9ce791bc72c8bacd8c6f6e40c6/828fb/cat-on-the-rock.jpg 630w,
 /static/c56c2b9ce791bc72c8bacd8c6f6e40c6/0ede0/cat-on-the-rock.jpg 945w,
 /static/c56c2b9ce791bc72c8bacd8c6f6e40c6/3ac88/cat-on-the-rock.jpg 1260w,
-/static/c56c2b9ce791bc72c8bacd8c6f6e40c6/e0c5a/cat-on-the-rock.jpg 2049w&quot;
-        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
+/static/c56c2b9ce791bc72c8bacd8c6f6e40c6/e0c5a/cat-on-the-rock.jpg 2049w&quot; sizes=&quot;(max-width: 630px) 100vw, 630px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
   &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
+    &lt;/span&gt;
+&lt;/figure&gt;
 &lt;p&gt;미키는 그 다음에도 몇 개의 징검다리를 더 건너야 했다. K가 작업해준 Cognito를 통한 사용자 sign up/sign in 프로세스를 붙이는 일도 했다. 회원 가입과 로그인 처리하는 걸 직접 만들려면 상당히 품이 많이 드는 일일 텐데, Cognito 이용하니 비교적 쉽게 그런 걸 할 수 있었다. 그래, 이런 서비스를 다 갖추어놓았으니 AWS가 돈을 버는 것이겠지.&lt;/p&gt;
 &lt;p&gt;고양이 사진에 들어있는 위치 정보를 뽑아내는 일도 필요했다. 그 일을 해주는 파이썬 라이브러리를 어렵지 않게 찾을 수 있었는데, 문제는 그걸 Lambda 함수에서 실행하는 문제였다. 뒷골목 돌 때마다 마주치게 되는 dependency 문제.&lt;/p&gt;
 &lt;p&gt;파이썬을 잘 모르는 미키였지만 - 어릴 때 본 책에 나온 ‘왕뱀 퓌톤’ 이란 명칭을 떠올리며 싱겁게 웃기나 하는 정도였다 - 어쨌든 필요한 라이브러리들을 끼워넣어야 했다. 뭐가 없네, 또 뭐가 없네, 하는 에러 메시지들마다 적당히 끼워 맞춰서 의존성 문제를 해결하는 중이었는데, PIL이라는 라이브러리가 문제였다.&lt;/p&gt;
 &lt;p&gt;이미지 처리를 위해서 쓰는 라이브러리인가본데, 요즘은 그걸 fork한 pillow 라는 걸 쓰는 모양이었다. 근데 그걸 &lt;code class=&quot;language-text&quot;&gt;pipenv install&lt;/code&gt; 해서는 설치가 잘 안 되고 뭔가 다른 방법으로 해야 하는 것 같았는데, 구글링해보니 어떤 용자가 Lambda Layer 들을 미리 만들어서 그 ARN(Amazon Resource Name)을 공개해놓은 것이 있었다. 그러니까 내가 원하는 라이브러리를 갖고 있는 Lambda Layer를 내 Lambda 함수 아랫단에 끼워넣으면 의존성이 해결되는 것이었다. 여러 개의 Lambda 함수에서 공통으로 사용할 코드를 Layer로 만들면 된다고 배웠는데, 이런 식으로도 사용할 수 있는 것이었군. 어쨌든 방법을 찾아서 다행이다, 미키는 한숨 돌리며 생각했다.&lt;/p&gt;
 &lt;p&gt;그런데 꼭 이렇게밖에 할 수 없는 걸까? AWS에서 파이썬 쓰는 게 썩 부드럽지는 않군. 미키는 엊그제 개발환경으로 Cloud9을 써볼까 싶어서 한번 시도해봤었는데, 거기서도 파이썬 버전 문제 때문에 그만둔 적이 있었기 때문이다. Lambda 함수에서 생성할 때 기본 지정되는 파이썬 런타임의 버전은 3.8인데, Cloud9에서 t3 AMI(Amazon Machine Image) 지정해서 인스턴스를 생성하면 파이썬 3.7이 들어 있다. 버전을 올려서 사용하고 싶으면 수동 설치하면 되긴 된다는데, 그러려면 먼저 인스턴스의 디스크 용량을 확장해야 한단다. 으… 미키는 거기까지 해보다가 귀찮아서 포기했다.&lt;/p&gt;
 &lt;p&gt;사실 Cloud9을 쓰게 되면 브라우저 상에서 코딩을 하게 될 텐데, 데스크탑 VS Code의 친숙함에 익숙해진 상태에서 브라우저 환경을 잘 쓰게 될지도 미지수인 상황이었다. 게다가 파이썬 버전을 맞추기 위해 이런 귀찮은 일까지 해야 한다면, 그다지 매력은 없었다. 어떤 서비스를 쓰든 동일한 버전을 사용할 수 있도록 AWS 쪽에서 일괄적으로 관리를 해주어야 불편함 없이 쓸 수 있을 것이었다. 하지만, 개발 언어로서 ‘왕뱀 퓌톤’은 나름 매력적인 간결함을 가지고 있는 것 같았다. 다음에 또 기회가 되면 좀 더 배워서 써봐야겠다고 미키는 생각했다.&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/62b3ed75348059f39861f4cbade78ea1/e0c5a/cat-on-the-grass.jpg&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 74.68354430379746%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAQACA//EABUBAQEAAAAAAAAAAAAAAAAAAAAD/9oADAMBAAIQAxAAAAHsO4CY/8QAFxAAAwEAAAAAAAAAAAAAAAAAAAERAv/aAAgBAQABBQJOq50QhFD/xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAwEBPwGI/8QAFhEBAQEAAAAAAAAAAAAAAAAAABEh/9oACAECAQE/AcR//8QAGhAAAgIDAAAAAAAAAAAAAAAAAAEQMREhgf/aAAgBAQAGPwI08xRS5H//xAAcEAEAAgEFAAAAAAAAAAAAAAABABExECFRYXH/2gAIAQEAAT8hCwhgVONAURylewvFQOp//9oADAMBAAIAAwAAABDjz//EABcRAQEBAQAAAAAAAAAAAAAAAAEAMXH/2gAIAQMBAT8QA5dX/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQARMf/aAAgBAgEBPxAFy1f/xAAcEAEBAAICAwAAAAAAAAAAAAABEQBBIVExgcH/2gAIAQEAAT8QKBO6eO7hCnKLLMDtcHcbA6wKVQlCj7nBzfuZ/9k=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;풀밭-고양이&quot;
-        title=&quot;풀밭-고양이&quot;
-        src=&quot;/static/62b3ed75348059f39861f4cbade78ea1/828fb/cat-on-the-grass.jpg&quot;
-        srcset=&quot;/static/62b3ed75348059f39861f4cbade78ea1/ff44c/cat-on-the-grass.jpg 158w,
+&lt;figure style=&quot;max-width:500px&quot;&gt;
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/62b3ed75348059f39861f4cbade78ea1/e0c5a/cat-on-the-grass.jpg&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 74.68354430379746%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAQACA//EABUBAQEAAAAAAAAAAAAAAAAAAAAD/9oADAMBAAIQAxAAAAHsO4CY/8QAFxAAAwEAAAAAAAAAAAAAAAAAAAERAv/aAAgBAQABBQJOq50QhFD/xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAwEBPwGI/8QAFhEBAQEAAAAAAAAAAAAAAAAAABEh/9oACAECAQE/AcR//8QAGhAAAgIDAAAAAAAAAAAAAAAAAAEQMREhgf/aAAgBAQAGPwI08xRS5H//xAAcEAEAAgEFAAAAAAAAAAAAAAABABExECFRYXH/2gAIAQEAAT8hCwhgVONAURylewvFQOp//9oADAMBAAIAAwAAABDjz//EABcRAQEBAQAAAAAAAAAAAAAAAAEAMXH/2gAIAQMBAT8QA5dX/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQARMf/aAAgBAgEBPxAFy1f/xAAcEAEBAAICAwAAAAAAAAAAAAABEQBBIVExgcH/2gAIAQEAAT8QKBO6eO7hCnKLLMDtcHcbA6wKVQlCj7nBzfuZ/9k=&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;풀밭-고양이&quot; title=&quot;풀밭-고양이&quot; src=&quot;/static/62b3ed75348059f39861f4cbade78ea1/828fb/cat-on-the-grass.jpg&quot; srcset=&quot;/static/62b3ed75348059f39861f4cbade78ea1/ff44c/cat-on-the-grass.jpg 158w,
 /static/62b3ed75348059f39861f4cbade78ea1/a6688/cat-on-the-grass.jpg 315w,
 /static/62b3ed75348059f39861f4cbade78ea1/828fb/cat-on-the-grass.jpg 630w,
 /static/62b3ed75348059f39861f4cbade78ea1/0ede0/cat-on-the-grass.jpg 945w,
 /static/62b3ed75348059f39861f4cbade78ea1/3ac88/cat-on-the-grass.jpg 1260w,
-/static/62b3ed75348059f39861f4cbade78ea1/e0c5a/cat-on-the-grass.jpg 2049w&quot;
-        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
+/static/62b3ed75348059f39861f4cbade78ea1/e0c5a/cat-on-the-grass.jpg 2049w&quot; sizes=&quot;(max-width: 630px) 100vw, 630px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
   &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
+    &lt;/span&gt;
+&lt;/figure&gt;
 &lt;p&gt;자, 이제 보니 그래도 어느 정도 와꾸(?)는 잡혀가는 것 같았다. 그런데, 계속 이런 식으로 작업해도 되는 걸까? 뭔가 중요한 걸 빠뜨리고 있다는 생각이 미키의 뒤통수를 치고 지나갔다. 이걸 지금 나 혼자 하고 있는 게 아니잖아. 셋이 같이 만들고 있는 건데, 누가 열심히 꾸며놓은 인프라 설정을 다른 사람이 새 작업을 하다가 바꿀 수도 있는 거잖아. 그러다가 누가 또 다시 갑자기 원래대로 돌려놓을 수도 있는 거고. 사실 그건 미키 혼자 작업을 한다 해도 마찬가지였다. 현재의 안정된 세팅 상태를 유지하면서, 동시에 새로운 개발 작업을 하려면 어떻게 해야 하지?&lt;/p&gt;
 &lt;p&gt;말하자면 백엔드의 개발 프로세스를 어느 정도는 제대로 갖춰놓아야 할 필요가 있었다. 실습 시간에 예제 코드 copy &amp;#x26; paste 하면서 인프라 꾸미는 것과는 다른 방식이 필요했다. 하루 이틀 만들어보고 날려버릴 연습문제 푸는 게 아니잖아, 미키는 중얼거렸다. 질문 메일을 써야겠군. 다음 번 Office Hour 때 AWS SA 분들이 와서 답을 해줄 수 있도록 메일을 작성했다.&lt;/p&gt;
 &lt;p&gt;“저기요, 백엔드 인프라 설정을 git 소스 코드에 같이 저장해서 관리하려면 어떻게 해야 하나요? 얼핏 보니 CodeStar 라는 서비스도 있던데 그런 걸 이용하면 할 수 있는 건가요?”&lt;/p&gt;
@@ -295,39 +217,19 @@
 &lt;p&gt;*&lt;/p&gt;
 &lt;p&gt;미키는 약간 초조하다. 지금쯤이면 어느 정도 와꾸(?)가 잡혀야 하는데, 여전히 초기 단계에서 헤매고 있다. 어쨌든 뭔가 빈 껍데기라도 눈에 보이는 게 있어야 그 다음 진도를 나갈 수 있을 것 같은데, 썰렁한 지도 한 장 띄우는 것도 그냥 한번에 되는 건 아니었다. 끌끌.&lt;/p&gt;
 &lt;p&gt;그래도 같이 하겠다고 손들어준 W와 K가 있어 다행이었다. 사실 이 주제를 AWS 프로젝트(AWSome Builder Program, ABP라고 불리고 있었다) 그룹 채팅방에 소개했을 때, 약간 걱정이 되기도 했었다. 동네 길고양이 지도 서비스를 만든다고? 거 참 실속없다 얘, 하고 누군가 코웃음칠 것 같았다. 하지만 의외로 반응이 괜찮았다. W는 즉각 합류 의사를 밝혀왔고, K는 별도의 주제를 고민하다가 이쪽에 힘을 보태주기로 했다. 주제 및 설계 초안 발표 모임 전날, K의 설계 스케치 덕분에 미키는 그걸 바탕으로 문서를 완성하고 잘 발표할 수 있었다.&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/a156f920959bffa7677e44529eddbbd6/7bf07/my-neighbor-cats-arch-v1.1.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 70.25316455696203%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAAAsTAAALEwEAmpwYAAAChUlEQVQ4y22TW2/bRhSE+ZeL9rEI+hfyC/qYtmjQIHDgGm2BPqRwKgOSg1QuHFmia5kiKZIr887lXr5iVxegSRcgVjpczpkzMxsAhOuIb1/8yEXSMdm2rsTuxQ+UX3wFSmH5fFlr/F4WIYv3Z/w9PSN/eEvgikmW89ObC35epVxntT+4eXXG8utvwOw/jJI1eZGR5zl93ztIX6/yOx7mryjuf0MVlwTW7l+oUdLuCuwokVJSPD0RRhGDlPR9xz/ZkqxK0cpgjD4BivQjN5PviBcX6N2fBMYYRqXoup5BDlRl4QHkMKDG0bMZhgFR57RD40G01ozj6CGtkZixxKgKq2oCsSt5jGLkqNhuQiYvv6SrM9puoG0auq6jaRrCZEkqEkQhqKrKA5qDHCddgSCOYx4fHzHGkqYx11e/I4feHzgeN9bSNyVD3/ppnExKqQOg9f+PT1DXte/omEg5UpY13TBi2gLu3zIoA2bk5R93TBcJ4d1HhNj5sY8MvQ92TzE40m3bFq0UepQobajzmOT6F8/KGs33v864mt8j8i1N034GeGLoRzKGzgEedDBaU7cdD5sUrQ+uWumTYCy+5pLwfys4utZJyS4Mid+92zupFLLraUzL8+0bRG9g7LFPD76tM8W5f9TSYbjfe4Za4/otz8+ZPXvm3dXGUJUVdV9ysVixiiR9VRCvbpByoCxLVqsVSZKQZRlCCJ+G4Di7v25CEC4Wp6w5BkYbttsUURY+Wrl42gdaCKbTKbPZzO8uLS6zwaei6gO4G8O577R6fX3FKkv/o1VRFFxeXjKZTJjP56zXa187Xb3j/mkDl7vZXx/Ii+LUyC033u3tLcvlks1mQxRF/p7/C4n+LGfwrFiMAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;initial-architecture&quot;
-        title=&quot;initial-architecture&quot;
-        src=&quot;/static/a156f920959bffa7677e44529eddbbd6/f058b/my-neighbor-cats-arch-v1.1.png&quot;
-        srcset=&quot;/static/a156f920959bffa7677e44529eddbbd6/c26ae/my-neighbor-cats-arch-v1.1.png 158w,
-/static/a156f920959bffa7677e44529eddbbd6/6bdcf/my-neighbor-cats-arch-v1.1.png 315w,
-/static/a156f920959bffa7677e44529eddbbd6/f058b/my-neighbor-cats-arch-v1.1.png 630w,
-/static/a156f920959bffa7677e44529eddbbd6/40601/my-neighbor-cats-arch-v1.1.png 945w,
-/static/a156f920959bffa7677e44529eddbbd6/7bf07/my-neighbor-cats-arch-v1.1.png 1128w&quot;
-        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
+&lt;figure&gt;
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/787363958f7208cc6ea43bbf8cf55974/7bf07/my-neighbor-cats-arch-v1.1.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 70.25316455696203%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAAAsTAAALEwEAmpwYAAACeklEQVQ4y22TW2/TQBCF/ZcRPCLEX+AX8IhAIBAFQQUPPIBapZBEgiKVkhhInDixvYnvXu/lQ7tpwnUla6xZ+8zMOWcCgHAWcffeQ47jhsG6dik29x6QX7sBSmH591hrfMzTkC/jIz5/OCL5/pbAJeMk5fHzY15OV4yT0n+4ePKMyc3bYHY/RvGMNEtI05S2bR2kz1diwuLiGdv5G7Q4JbB2d6F6Sb3JsL1ESkm23RJGEZ2UtG3D92RCUqzQymCMPnRq2gi7PYVqCMV7AmMMvVI0TUsnO4o88wCy61B977vpug5RptRd5UG01vR973u0RmJVgekLHwOxyZlHS2SvWC9CBo+u05QJddNRVxVN01BVFWE8YSViRCYoisIDmis6fuc4WC6XzOdzjLGsVkvGZ2+QXbsbZz+WtbRVTtfWfhpHk1LqF6C1hycoy9JXdJ1I2ZPnJU3XY+oMvr2lUwZMz6N3XxlexoRfvyDExo/9O+BufnYqu1PXNVopdC9R2lCmS+LxK9+VNZr7r0ecnX9DpGuqqv4H8NChH8kYGgd4xYfRmrJu+LFYofWVqlZ6JxiLzzkn/O8Ee9UaKdmEIcvT052SSiGblsrU3Fk/R7QG+ha7/eHLOlGc+nsuHYZ733WoNa7e5MULRrdueXW1MRR5QdnmHF9OmUaStshYTj8jZUee50ynU+I4JkkShBDeDcF+dr9uQhBeXh685jow2rBerxB55q2Viq2/dwDD4ZDRaOSjc4vzbPA3qfoK3I3h1HdcPR2fMU1Wf3CVZRknJycMBgPOz8+ZzWY+d1i9ffy7gPPd6NNH0iw7FPI7XFVcXFwwmUxYLBZEUeT3/CcHfi1kvcXn1gAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;initial-architecture&quot; title=&quot;initial-architecture&quot; src=&quot;/static/787363958f7208cc6ea43bbf8cf55974/f058b/my-neighbor-cats-arch-v1.1.png&quot; srcset=&quot;/static/787363958f7208cc6ea43bbf8cf55974/c26ae/my-neighbor-cats-arch-v1.1.png 158w,
+/static/787363958f7208cc6ea43bbf8cf55974/6bdcf/my-neighbor-cats-arch-v1.1.png 315w,
+/static/787363958f7208cc6ea43bbf8cf55974/f058b/my-neighbor-cats-arch-v1.1.png 630w,
+/static/787363958f7208cc6ea43bbf8cf55974/40601/my-neighbor-cats-arch-v1.1.png 945w,
+/static/787363958f7208cc6ea43bbf8cf55974/7bf07/my-neighbor-cats-arch-v1.1.png 1128w&quot; sizes=&quot;(max-width: 630px) 100vw, 630px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
   &lt;/a&gt;
     &lt;/span&gt;
-&lt;em&gt;‘우리 동네 고양이’ 프로젝트 구조 - 초기 설계&lt;/em&gt;&lt;/p&gt;
+  &lt;figcaption&gt;&apos;우리 동네 고양이&apos; 프로젝트 구조 - 초기 설계&lt;/figcaption&gt;
+&lt;/figure&gt;
 &lt;p&gt;발표 모임에서는 여러 가지 제안들도 나왔다. 기본 설계에서 더 보완할 점들(S3 bucket에 이미지 파일을 업로드할 때 API Gateway 거치지 않고 직접 올리는 게 낫다는 것 등)과 함께, 이 서비스가 제대로 만들어진다면 추가될 수 있을 각종 고급 기능들에 대한 아이디어들도 쏟아져 나왔다. 오, 이런 호의적인 반응이라니. 일단 아이디어로는 어그로를 끄는 데 성공한 것 같군. 미키는 안심이 되었다. AWS 솔루션 아키텍트(SA) 분들도 많은 조언을 해주었는데, 특히 S님이 ‘우리 동네 고양이’ 라는 이름이 좋다고 해줘서 고마운 마음이 들었다. 미키가 은근히 신경쓰는 것 중 하나가 이름 짓는 것이었거든. 알아본 사람이 있는지 모르겠지만 프로젝트의 영어 이름 ‘My Neighbor Cats’ 도 미키가 좋아하는 ‘이웃집 토토로’의 영어 제목, ‘My Neighbor Totoro’ 에서 따온 것이었다.&lt;/p&gt;
 &lt;p&gt;그렇게 나름 관심을 받으며 시작한 프로젝트였다. 이제 그 기대에 부응하여 멋진 결과를 보여줘야 할 텐데, 날짜는 하루하루 가고 있고, 아직 제대로 시작은 못하고 있었다. 핑계가 있기는 했다. 이 프로젝트를 비롯하여 여러 참여 팀들의 AWS 계정을 인프라 팀에서 통합 관리해주기로 하였는데 아직 계정이 안 나오고 있었으니. 그래도 그와 상관없이 작업할 수 있는 것들은 미리 해놓아야 하는데…&lt;/p&gt;
 &lt;p&gt;작업 영역은 자연스럽게 나뉜 상황이었다. 프론트엔드 쪽은 미키가, 백엔드 쪽은 W와 K가 나눠서 맡게 되었고, 아무래도 아이디어 제안자인 미키가 주도적으로 전반적인 진행을 끌고 가게 될 것이었다. 약간 불안 요소가 있다면 미키가 AWS에 대해서 그렇게 썩 잘 알고 있지는 못하다는 것이었다. 물론 앞선 몇 개월간 매주 열심히 세미나에 참여하기는 했다. 가끔씩 졸다가도 곧잘 질문도 하고, 실습 시간에도 가이드 따라서 AWS 콘솔 들어가서 클릭, 클릭 열심히 인프라 구성도 해보고 코드 copy &amp;#x26; paste 도 하고 그랬다. 하지만 실습 문서 따라해보는 거랑 직접 만들어보는 거랑은 많이 다를 거라는 건 미키도 이미 예상하고 있었다. 아마도, 거의 확실히, 수많은 삽질을 거쳐야 할 터였다. 그리고 그 삽질은 시작하자마자 시작된 셈이었다.&lt;/p&gt;
