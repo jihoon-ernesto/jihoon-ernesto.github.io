@@ -21,21 +21,29 @@ description: 나는 어찌하여 xterm 걱정을 그만두고 다시 VS Code를 
 
 일주일 정도 지났을까. 아니, 열흘 정도였을까. 낯선 이메일이 날아왔다. 깃헙 불라불라 뭐라고 써있는데, 평소에 가끔 날아오던 스팸 메일과 좀 다른 모양의 스팸이었다. 앗, 그거다! 누가 내 거에다가 댓글을 달았나보다!
 
-![xterm-issue-comment](./xterm-issue-comment-by-T.png)
-*(나의 해석: "여기 말고 xterm을 갖다 쓰는 데서 구현하도록 하자꾸나.")*
+<figure>
+  <img src="xterm-issue-comment-by-T.png" alt="xterm-issue-comment" />
+  <figcaption class="left">(나의 해석: "여기 말고 xterm을 갖다 쓰는 데서 구현하도록 하자꾸나.")</figcaption>
+</figure>
 
 T로 시작하는 아이디를 쓰는 사람이었다. 이 사람이 PR 쪽에도 코멘트를 달았나보다. 가보자.
 
-![xterm-pr-comment](./xterm-pr-comment-by-T.png)
-*(나의 해석: "있잖아, 이 단축키를 쓰는 데는 macOS 터미널밖에 없어.<br>
-그러니까 이 키가 필요하다면 VS Code 쪽에서 커스텀 키로 넣는 게 좋겠어.<br>
-우리는 xterm을 가능한 한 작게, 논란거리 없도록 만들고 싶거든.<br>
-내가 VS Code 쪽에 이슈를 만들어놨으니, 네가 거기서 해결해보렴. 아니면 주말에 내가 할 거란다. ㅋ")*
+<figure>
+  <img src="xterm-pr-comment-by-T.png" alt="xterm-pr-comment" />
+  <figcaption class="left">
+    (나의 해석: "있잖아, 이 단축키를 쓰는 데는 macOS 터미널밖에 없어.<br>
+    그러니까 이 키가 필요하다면 VS Code 쪽에서 커스텀 키로 넣는 게 좋겠어.<br>
+    우리는 xterm을 가능한 한 작게, 논란거리 없도록 만들고 싶거든.<br>
+    내가 VS Code 쪽에 이슈를 만들어놨으니, 네가 거기서 해결해보렴. 아니면 주말에 내가 할 거란다. ㅋ")
+  </figcaption>
+</figure>
 
 황야의 xterm 프로젝트의 주인이 돌아온 것이었다! 하지만 일단은 거절. 쳇, 그냥 넣어 주지. 여기에 이게 들어가면 다른 여러 응용 프로젝트들에서는 신경 안 써도 되는 일인데… 하지만 코어 쪽은 최대한 가볍게 유지하고 싶다는 T의 의견도 이해는 갔다. 좋아, 그럼 다시 VS Code 쪽으로 가보자.
 
-![vscode-issue](./vscode-issue-by-T.png)
-*VS Code 쪽에 T가 생성한 이슈*
+<figure>
+  <img src="vscode-issue-by-T.png" alt="vscode-issue" />
+  <figcaption>VS Code 쪽에 T가 생성한 이슈</figcaption>
+</figure>
 
 오잉, 설명은 그냥  링크로 때우고 코드 일부를 갖다 붙여놓았네? 오호, 이 부분을 고치면 된다는 뜻인가보군! 가만있자… 그 아래에 또 다른 사람 K가 댓글을 달았네.
 
@@ -54,8 +62,10 @@ T가 알려준 좌표는 `terminal.contribution.ts` 파일. 여기에다가 뭔�
 
 자, 이제 다시 VS Code에 PR을 올리자. VS Code를 내 계정으로 fork 하고, 그걸 origin 삼아서 local 에 clone하고, `cmd-dot-in-terminal` 이라는 이름으로 작업 브랜치 만들고, 코드 수정하여 커밋을 만들었다. 이걸 `git push` 하고, github 웹페이지에 가서 PR 생성하였다. from 브랜치는 `jihoon-ernesto:cmd-dot-in-terminal` 이고, to 브랜치는 `microsoft:main` 이다. PR 제목은 T가 이슈 생성한 제목 그대로 썼다. 이 사람이 쓴 표현이 나보다 더 정확하겠지. 화살표 기호 하나만 살짝 바꾸었다.
 
-![vscode-pr](./vscode-pr-by-me.png)
-*VS Code 쪽에 올린 PR*
+<figure>
+  <img src="vscode-pr-by-me.png" alt="vscode-pr" />
+  <figcaption>VS Code 쪽에 올린 PR</figcaption>
+</figure>
 
 휴, 벌써 시간이 이렇게 되었잖아? 별로 큰 일 한 것도 아닌데 새벽이 되었네.
 
@@ -73,8 +83,10 @@ T는 xterm의 프로젝트 주인 아니었어? VS Code에 커밋 권한까지 �
 
 메인 브랜치의 코드는 적당한 때가 되어야 실제 제품에 포함되는 법. 드디어 1.60 버전에 이 커밋이 반영되었다.
 
-![vscode-release-note](./vscode-release-note-1.60.png)
-*VS Code 1.60의 release note 중에서*
+<figure style="max-width:848px">
+  <img src="vscode-release-note-1.60.png" alt="vscode-release-note" />
+  <figcaption>VS Code 1.60의 release note 중에서</figcaption>
+</figure>
 
 얘들아, 이거 봐! VS Code의 공식 릴리스 노트에 내 아이디가 들어갔어! 이제 우리가 한여름 땡볕 아래에서 에어컨을 켤 때마다 발명자 캐리어 님을 찬양하는 것처럼, VS Code 내장 터미널에서 커맨드 쩜을 누를 때마다 온 세상이 내 이름을 기억하게 될 거야. *영원히! Para siempre! Until the end of time! ~~(아님)~~*
 
