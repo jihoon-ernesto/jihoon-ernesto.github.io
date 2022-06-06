@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A blog on S/W engineering]]></description><link>https://jihoon-ernesto.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 05 Jun 2022 00:32:29 GMT</lastBuildDate><item><title><![CDATA[우리 동네 고양이 - part 3]]></title><description><![CDATA[(이전 글: 우리 동네 고양이 - part 2) 방법은 멀리 있지 않았다. 미키가 여태까지 쓰고 있던 AWS Amplify를 그대로 쓰면 되는 것이었다. 단, 웹 콘솔이 아니라 CLI 이용해서. “Amplify에서 frontend와 backend…]]></description><link>https://jihoon-ernesto.github.io/my-neighbor-cats-part3/</link><guid isPermaLink="false">https://jihoon-ernesto.github.io/my-neighbor-cats-part3/</guid><pubDate>Tue, 21 Dec 2021 09:25:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;(이전 글: &lt;a href=&quot;../my-neighbor-cats-part2/&quot;&gt;우리 동네 고양이 - part 2&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A blog on S/W engineering]]></description><link>https://jihoon-ernesto.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 06 Jun 2022 01:13:39 GMT</lastBuildDate><item><title><![CDATA[우리 동네 고양이 - part 3]]></title><description><![CDATA[(이전 글: 우리 동네 고양이 - part 2) 방법은 멀리 있지 않았다. 미키가 여태까지 쓰고 있던 AWS Amplify를 그대로 쓰면 되는 것이었다. 단, 웹 콘솔이 아니라 CLI 이용해서. “Amplify에서 frontend와 backend…]]></description><link>https://jihoon-ernesto.github.io/my-neighbor-cats-part3/</link><guid isPermaLink="false">https://jihoon-ernesto.github.io/my-neighbor-cats-part3/</guid><pubDate>Tue, 21 Dec 2021 09:25:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;(이전 글: &lt;a href=&quot;../my-neighbor-cats-part2/&quot;&gt;우리 동네 고양이 - part 2&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
 &lt;br&gt;
 &lt;p&gt;방법은 멀리 있지 않았다. 미키가 여태까지 쓰고 있던 AWS Amplify를 그대로 쓰면 되는 것이었다. 단, 웹 콘솔이 아니라 CLI 이용해서.&lt;/p&gt;
 &lt;p&gt;“Amplify에서 frontend와 backend 연결하는 방법 있는 것 아시잖아요? git 브랜치를 여러 개 만들 수 있듯이 backend 환경을 여러 개 만들 수 있어요. 각각의 backend 환경을 상황에 맞게 알맞은 git 브랜치에 연결해서 사용하면 돼요.”&lt;/p&gt;
@@ -356,113 +356,55 @@
 &lt;p&gt;이슈와 PR을 등록한 다음은 기다림의 시간이었다. 내 맘 같아서야 금방이라도 누가 보고 “오케이, 잘 했어!” 하고 승인해주면 좋겠지만, 여긴 황야의 오픈소스 월드. 길 떠난 프로젝트 주인이 언제 돌아와 내 작은 메모 쪽지를 보아줄지 모르는 상황이었다. 앞서 등록된 다른 이슈와 PR들도 쌓여있는 것들이 많았다. “뭐야, 누가 이런 하찮은 걸 올렸어!” 하는 신경질적인 대답과 함께 빠꾸(?)를 먹을지도 모를 일이었다. 더 나쁜 건, 아무도 관심 주지 않아서 그냥 시간이 지나면서 묻혀버리는 것이었다. 내 github 계정의 프로파일 이미지라도 좀 그럴듯한 걸로 올려놓을 걸 그랬나. ‘사진도 없는 웬 듣보잡이 이상한 걸 올리고 그래..?’ 하고서는 휙 지나쳐버리면 어떡하나.&lt;/p&gt;
 &lt;p&gt;그러던 어느 날.&lt;/p&gt;
 &lt;p&gt;일주일 정도 지났을까. 아니, 열흘 정도였을까. 낯선 이메일이 날아왔다. 깃헙 불라불라 뭐라고 써있는데, 평소에 가끔 날아오던 스팸 메일과 좀 다른 모양의 스팸이었다. 앗, 그거다! 누가 내 거에다가 댓글을 달았나보다!&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/1d82d1bd41761cc2d36e1328c4cea057/28e7f/xterm-issue-comment-by-T.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 12.025316455696203%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAYAAABYBvyLAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAWklEQVQI14XLQQ6DIBBAUe9/m3oj2y3MDFphEMhvQuLSdPFWP395rSvb+0PURBCbxHZKvf7y2jhLnY+mgzM7S84F94pZIooSRSZVI+xOOBr6bfQxGA/u1vvgB08hmkcS9QsuAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;xterm-issue-comment&quot;
-        title=&quot;xterm-issue-comment&quot;
-        src=&quot;/static/1d82d1bd41761cc2d36e1328c4cea057/f058b/xterm-issue-comment-by-T.png&quot;
-        srcset=&quot;/static/1d82d1bd41761cc2d36e1328c4cea057/c26ae/xterm-issue-comment-by-T.png 158w,
+&lt;figure&gt;
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/1d82d1bd41761cc2d36e1328c4cea057/28e7f/xterm-issue-comment-by-T.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 12.025316455696203%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAYAAABYBvyLAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAWklEQVQI14XLQQ6DIBBAUe9/m3oj2y3MDFphEMhvQuLSdPFWP395rSvb+0PURBCbxHZKvf7y2jhLnY+mgzM7S84F94pZIooSRSZVI+xOOBr6bfQxGA/u1vvgB08hmkcS9QsuAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;xterm-issue-comment&quot; title=&quot;xterm-issue-comment&quot; src=&quot;/static/1d82d1bd41761cc2d36e1328c4cea057/f058b/xterm-issue-comment-by-T.png&quot; srcset=&quot;/static/1d82d1bd41761cc2d36e1328c4cea057/c26ae/xterm-issue-comment-by-T.png 158w,
 /static/1d82d1bd41761cc2d36e1328c4cea057/6bdcf/xterm-issue-comment-by-T.png 315w,
 /static/1d82d1bd41761cc2d36e1328c4cea057/f058b/xterm-issue-comment-by-T.png 630w,
 /static/1d82d1bd41761cc2d36e1328c4cea057/40601/xterm-issue-comment-by-T.png 945w,
 /static/1d82d1bd41761cc2d36e1328c4cea057/78612/xterm-issue-comment-by-T.png 1260w,
-/static/1d82d1bd41761cc2d36e1328c4cea057/28e7f/xterm-issue-comment-by-T.png 1848w&quot;
-        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
+/static/1d82d1bd41761cc2d36e1328c4cea057/28e7f/xterm-issue-comment-by-T.png 1848w&quot; sizes=&quot;(max-width: 630px) 100vw, 630px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
   &lt;/a&gt;
     &lt;/span&gt;
-&lt;em&gt;(나의 해석: “여기 말고 xterm을 갖다 쓰는 데서 구현하도록 하자꾸나.“)&lt;/em&gt;&lt;/p&gt;
+  &lt;figcaption class=&quot;left&quot;&gt;(나의 해석: &quot;여기 말고 xterm을 갖다 쓰는 데서 구현하도록 하자꾸나.&quot;)&lt;/figcaption&gt;
+&lt;/figure&gt;
 &lt;p&gt;T로 시작하는 아이디를 쓰는 사람이었다. 이 사람이 PR 쪽에도 코멘트를 달았나보다. 가보자.&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/ae157ea86d841b9023796c147f8714c8/b6e50/xterm-pr-comment-by-T.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 19.62025316455696%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAu0lEQVQY01WOXXLDIAwGff8zNTcpjseQTGvMn1O3xYA3g/qQ6YNmF+kTo+HtckGNV9JjJ6SNuH2J51I5SvvHXJr4UV/MR5Wd7bGzf/8ymNsdHyJ2dVKfi2WxDucDq/OEmMR7JoQobq3Fub98z3wsVpiPwgBQSpErpdTIdZoY5f3yTjUZ1HxH6ZX32TLrG1obZq0xxpBzZjjPUz6MaSPESIxJ2C8TD70XZe6DJ/946gmlQWsntVZqa8JSK0/4SC+pAJ9VcQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;xterm-pr-comment&quot;
-        title=&quot;xterm-pr-comment&quot;
-        src=&quot;/static/ae157ea86d841b9023796c147f8714c8/f058b/xterm-pr-comment-by-T.png&quot;
-        srcset=&quot;/static/ae157ea86d841b9023796c147f8714c8/c26ae/xterm-pr-comment-by-T.png 158w,
+&lt;figure&gt;
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/ae157ea86d841b9023796c147f8714c8/b6e50/xterm-pr-comment-by-T.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 19.62025316455696%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAu0lEQVQY01WOXXLDIAwGff8zNTcpjseQTGvMn1O3xYA3g/qQ6YNmF+kTo+HtckGNV9JjJ6SNuH2J51I5SvvHXJr4UV/MR5Wd7bGzf/8ymNsdHyJ2dVKfi2WxDucDq/OEmMR7JoQobq3Fub98z3wsVpiPwgBQSpErpdTIdZoY5f3yTjUZ1HxH6ZX32TLrG1obZq0xxpBzZjjPUz6MaSPESIxJ2C8TD70XZe6DJ/946gmlQWsntVZqa8JSK0/4SC+pAJ9VcQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;xterm-pr-comment&quot; title=&quot;xterm-pr-comment&quot; src=&quot;/static/ae157ea86d841b9023796c147f8714c8/f058b/xterm-pr-comment-by-T.png&quot; srcset=&quot;/static/ae157ea86d841b9023796c147f8714c8/c26ae/xterm-pr-comment-by-T.png 158w,
 /static/ae157ea86d841b9023796c147f8714c8/6bdcf/xterm-pr-comment-by-T.png 315w,
 /static/ae157ea86d841b9023796c147f8714c8/f058b/xterm-pr-comment-by-T.png 630w,
 /static/ae157ea86d841b9023796c147f8714c8/40601/xterm-pr-comment-by-T.png 945w,
 /static/ae157ea86d841b9023796c147f8714c8/78612/xterm-pr-comment-by-T.png 1260w,
-/static/ae157ea86d841b9023796c147f8714c8/b6e50/xterm-pr-comment-by-T.png 1862w&quot;
-        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
+/static/ae157ea86d841b9023796c147f8714c8/b6e50/xterm-pr-comment-by-T.png 1862w&quot; sizes=&quot;(max-width: 630px) 100vw, 630px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
   &lt;/a&gt;
     &lt;/span&gt;
-&lt;em&gt;(나의 해석: “있잖아, 이 단축키를 쓰는 데는 macOS 터미널밖에 없어.&lt;br&gt;
-그러니까 이 키가 필요하다면 VS Code 쪽에서 커스텀 키로 넣는 게 좋겠어.&lt;br&gt;
-우리는 xterm을 가능한 한 작게, 논란거리 없도록 만들고 싶거든.&lt;br&gt;
-내가 VS Code 쪽에 이슈를 만들어놨으니, 네가 거기서 해결해보렴. 아니면 주말에 내가 할 거란다. ㅋ”)&lt;/em&gt;&lt;/p&gt;
+  &lt;figcaption class=&quot;left&quot;&gt;
+    (나의 해석: &quot;있잖아, 이 단축키를 쓰는 데는 macOS 터미널밖에 없어.&lt;br&gt;
+    그러니까 이 키가 필요하다면 VS Code 쪽에서 커스텀 키로 넣는 게 좋겠어.&lt;br&gt;
+    우리는 xterm을 가능한 한 작게, 논란거리 없도록 만들고 싶거든.&lt;br&gt;
+    내가 VS Code 쪽에 이슈를 만들어놨으니, 네가 거기서 해결해보렴. 아니면 주말에 내가 할 거란다. ㅋ&quot;)
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
 &lt;p&gt;황야의 xterm 프로젝트의 주인이 돌아온 것이었다! 하지만 일단은 거절. 쳇, 그냥 넣어 주지. 여기에 이게 들어가면 다른 여러 응용 프로젝트들에서는 신경 안 써도 되는 일인데… 하지만 코어 쪽은 최대한 가볍게 유지하고 싶다는 T의 의견도 이해는 갔다. 좋아, 그럼 다시 VS Code 쪽으로 가보자.&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/65372a095439409f5ae43f36ae20bb84/277c6/vscode-issue-by-T.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 46.835443037974684%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABYlAAAWJQFJUiTwAAABg0lEQVQoz2WSSYvbQBhE/f9/kXMfyDnkMB4dxiaxLGtfel+kF7plG0M+KEQ3oup1dR+KouB4/EF5qyjLG7eqoqru3OuaaZrQWjOOI8M40nV9/rZtlzUvC9O8sK4rabZt43C+XDidvjDW4pzDWod1PivGlbiurOu2a9uV9tP6OcnoqcP3+ULddAyzphkl06LQxuJDxPnwn6wPLFLlwKZpkFKykYLW5MwhJRhjqfsZYSIuPCjWXSG+Eb6RJpqu6xBSvkiT6SG5ptRbJ/hTTVxrQdUbqkHTzJZeOEyuILxkrM9h7b2kKE58nD74Kn9n00zofcgdLrNhGDRdKxhGiVQGpR0u7Md57ypNc685F1eOnz/51Xy+GYaQj62kRwqPmC1SGrRySOkwOuJszL3yMEs3m3p8n+3ZofcebQxCWPpB07YLwySZZ0U/KqQKeB8JMb5I2aAcar6Hv9xkw1XcafWwG6YfbX4yiTSilUfrROZQ2mMT3cPweTHJVGrFLAUueHwMhDXwD5TVuMRSIflZAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;vscode-issue&quot;
-        title=&quot;vscode-issue&quot;
-        src=&quot;/static/65372a095439409f5ae43f36ae20bb84/f058b/vscode-issue-by-T.png&quot;
-        srcset=&quot;/static/65372a095439409f5ae43f36ae20bb84/c26ae/vscode-issue-by-T.png 158w,
+&lt;figure&gt;
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/65372a095439409f5ae43f36ae20bb84/277c6/vscode-issue-by-T.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 46.835443037974684%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABYlAAAWJQFJUiTwAAABg0lEQVQoz2WSSYvbQBhE/f9/kXMfyDnkMB4dxiaxLGtfel+kF7plG0M+KEQ3oup1dR+KouB4/EF5qyjLG7eqoqru3OuaaZrQWjOOI8M40nV9/rZtlzUvC9O8sK4rabZt43C+XDidvjDW4pzDWod1PivGlbiurOu2a9uV9tP6OcnoqcP3+ULddAyzphkl06LQxuJDxPnwn6wPLFLlwKZpkFKykYLW5MwhJRhjqfsZYSIuPCjWXSG+Eb6RJpqu6xBSvkiT6SG5ptRbJ/hTTVxrQdUbqkHTzJZeOEyuILxkrM9h7b2kKE58nD74Kn9n00zofcgdLrNhGDRdKxhGiVQGpR0u7Md57ypNc685F1eOnz/51Xy+GYaQj62kRwqPmC1SGrRySOkwOuJszL3yMEs3m3p8n+3ZofcebQxCWPpB07YLwySZZ0U/KqQKeB8JMb5I2aAcar6Hv9xkw1XcafWwG6YfbX4yiTSilUfrROZQ2mMT3cPweTHJVGrFLAUueHwMhDXwD5TVuMRSIflZAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;vscode-issue&quot; title=&quot;vscode-issue&quot; src=&quot;/static/65372a095439409f5ae43f36ae20bb84/f058b/vscode-issue-by-T.png&quot; srcset=&quot;/static/65372a095439409f5ae43f36ae20bb84/c26ae/vscode-issue-by-T.png 158w,
 /static/65372a095439409f5ae43f36ae20bb84/6bdcf/vscode-issue-by-T.png 315w,
 /static/65372a095439409f5ae43f36ae20bb84/f058b/vscode-issue-by-T.png 630w,
 /static/65372a095439409f5ae43f36ae20bb84/40601/vscode-issue-by-T.png 945w,
 /static/65372a095439409f5ae43f36ae20bb84/78612/vscode-issue-by-T.png 1260w,
-/static/65372a095439409f5ae43f36ae20bb84/277c6/vscode-issue-by-T.png 2522w&quot;
-        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
+/static/65372a095439409f5ae43f36ae20bb84/277c6/vscode-issue-by-T.png 2522w&quot; sizes=&quot;(max-width: 630px) 100vw, 630px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
   &lt;/a&gt;
     &lt;/span&gt;
-&lt;em&gt;VS Code 쪽에 T가 생성한 이슈&lt;/em&gt;&lt;/p&gt;
+  &lt;figcaption&gt;VS Code 쪽에 T가 생성한 이슈&lt;/figcaption&gt;
+&lt;/figure&gt;
 &lt;p&gt;오잉, 설명은 그냥  링크로 때우고 코드 일부를 갖다 붙여놓았네? 오호, 이 부분을 고치면 된다는 뜻인가보군! 가만있자… 그 아래에 또 다른 사람 K가 댓글을 달았네.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;K: 이봐, 이거 지금 작업중이니? 아니라면 내가 가져갈게.&lt;br&gt;
@@ -476,40 +418,20 @@ T: jihoon-ernesto(= 나)가 해결할지도 모르니 며칠 기다려보는 게
 &lt;p&gt;T가 알려준 좌표는 &lt;code class=&quot;language-text&quot;&gt;terminal.contribution.ts&lt;/code&gt; 파일. 여기에다가 뭔가 해야 하는 것이었군. 처음에 VS Code 들여다볼 때에는 딴 데만 기웃거리고 있었으니 삽질만 한 것이었다. 그 파일에는 ctrl-A, ctrl-E 등의 키에 해당하는 별도의 키를 추가로 등록하는 코드가 들어 있었고, 나도 비슷한 형식으로 집어넣으면 될 것 같았다. 전반적인 흐름이나 모듈 구성 등을 이해하지는 못했지만, 뭐 내가 하려는 일은 아주 작고 명확한 것이니까, 이것만 제대로 동작하면 될 것이었다. 어찌어찌 또 약간의 삽질 끝에 Code-OSS 실행하여 내장 터미널 창에서 커맨드 쩜의 동작을 확인할 수 있었다. 휴~&lt;/p&gt;
 &lt;p&gt;문득, 혹시 PR을 올릴 때 unit test 코드도 항상 같이 포함시켜야 하나, 싶었다. 좀 귀찮기도 해서 안 하고 싶은 생각이 들었는데… 다행이군 ㅋ. 다른 사람들의 PR들을 보니 그냥 올린 것들도 많았다. 꼭 해야 하는 건 아니구나.&lt;/p&gt;
 &lt;p&gt;자, 이제 다시 VS Code에 PR을 올리자. VS Code를 내 계정으로 fork 하고, 그걸 origin 삼아서 local 에 clone하고, &lt;code class=&quot;language-text&quot;&gt;cmd-dot-in-terminal&lt;/code&gt; 이라는 이름으로 작업 브랜치 만들고, 코드 수정하여 커밋을 만들었다. 이걸 &lt;code class=&quot;language-text&quot;&gt;git push&lt;/code&gt; 하고, github 웹페이지에 가서 PR 생성하였다. from 브랜치는 &lt;code class=&quot;language-text&quot;&gt;jihoon-ernesto:cmd-dot-in-terminal&lt;/code&gt; 이고, to 브랜치는 &lt;code class=&quot;language-text&quot;&gt;microsoft:main&lt;/code&gt; 이다. PR 제목은 T가 이슈 생성한 제목 그대로 썼다. 이 사람이 쓴 표현이 나보다 더 정확하겠지. 화살표 기호 하나만 살짝 바꾸었다.&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/6bd815bdb142cb1c3e6e37705a5dc853/37563/vscode-pr-by-me.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 26.58227848101266%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABYlAAAWJQFJUiTwAAABEElEQVQY022PS2+CQBSF+f87l/UnuHFZHlaTamJ8u6itf0CtdoCBGRhghK8Bk8ZFT3LuKzfnnussFgteXZfR6A3X8/E8H9f1CIIR4/GE9+mU6WzW1ePJBD8I8Hyfz68jQoSczmeiKCaOJVpnOB+HA/P5nPV6zXa7ZbVa/eWW7bw9ulwu2e127Pd7NpsNUkr+g1OXFmMKstxg7zVlZbF1Q/20VDcPPqMoK3JTYO29E1dK0zQNTiEezfUmuP4IRBgj2heSlERpZKKQqULnphMxRYkpKlKdYcqKKJb0+y8Mh8OHwzbYuyWNUy5hzjnMuUSGW5whkpzvKOMkMm7SoLVGKdU5stZ2AkmS0Ov1GAwGneAvT7pvfvfKfGoAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;vscode-pr&quot;
-        title=&quot;vscode-pr&quot;
-        src=&quot;/static/6bd815bdb142cb1c3e6e37705a5dc853/f058b/vscode-pr-by-me.png&quot;
-        srcset=&quot;/static/6bd815bdb142cb1c3e6e37705a5dc853/c26ae/vscode-pr-by-me.png 158w,
+&lt;figure&gt;
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/6bd815bdb142cb1c3e6e37705a5dc853/37563/vscode-pr-by-me.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 26.58227848101266%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABYlAAAWJQFJUiTwAAABEElEQVQY022PS2+CQBSF+f87l/UnuHFZHlaTamJ8u6itf0CtdoCBGRhghK8Bk8ZFT3LuKzfnnussFgteXZfR6A3X8/E8H9f1CIIR4/GE9+mU6WzW1ePJBD8I8Hyfz68jQoSczmeiKCaOJVpnOB+HA/P5nPV6zXa7ZbVa/eWW7bw9ulwu2e127Pd7NpsNUkr+g1OXFmMKstxg7zVlZbF1Q/20VDcPPqMoK3JTYO29E1dK0zQNTiEezfUmuP4IRBgj2heSlERpZKKQqULnphMxRYkpKlKdYcqKKJb0+y8Mh8OHwzbYuyWNUy5hzjnMuUSGW5whkpzvKOMkMm7SoLVGKdU5stZ2AkmS0Ov1GAwGneAvT7pvfvfKfGoAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;vscode-pr&quot; title=&quot;vscode-pr&quot; src=&quot;/static/6bd815bdb142cb1c3e6e37705a5dc853/f058b/vscode-pr-by-me.png&quot; srcset=&quot;/static/6bd815bdb142cb1c3e6e37705a5dc853/c26ae/vscode-pr-by-me.png 158w,
 /static/6bd815bdb142cb1c3e6e37705a5dc853/6bdcf/vscode-pr-by-me.png 315w,
 /static/6bd815bdb142cb1c3e6e37705a5dc853/f058b/vscode-pr-by-me.png 630w,
 /static/6bd815bdb142cb1c3e6e37705a5dc853/40601/vscode-pr-by-me.png 945w,
 /static/6bd815bdb142cb1c3e6e37705a5dc853/78612/vscode-pr-by-me.png 1260w,
-/static/6bd815bdb142cb1c3e6e37705a5dc853/37563/vscode-pr-by-me.png 2228w&quot;
-        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
+/static/6bd815bdb142cb1c3e6e37705a5dc853/37563/vscode-pr-by-me.png 2228w&quot; sizes=&quot;(max-width: 630px) 100vw, 630px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
   &lt;/a&gt;
     &lt;/span&gt;
-&lt;em&gt;VS Code 쪽에 올린 PR&lt;/em&gt;&lt;/p&gt;
+  &lt;figcaption&gt;VS Code 쪽에 올린 PR&lt;/figcaption&gt;
+&lt;/figure&gt;
 &lt;p&gt;휴, 벌써 시간이 이렇게 되었잖아? 별로 큰 일 한 것도 아닌데 새벽이 되었네.&lt;/p&gt;
 &lt;p&gt;다음 날.&lt;br&gt;
 밤에 올린 PR에 댓글이 달려 있었다.&lt;/p&gt;
@@ -521,40 +443,20 @@ T는 xterm의 프로젝트 주인 아니었어? VS Code에 커밋 권한까지 �
 &lt;p&gt;여기서 잠시 생각해보면, 내 커밋이 머지되기까지는 운이 좋았다. T가 손수 이슈를 등록해주면서 어느 위치를 고치면 되는지까지 알려주었고, xterm의 주인인 줄로만 알았던 이 사람이 알고 보니 VS Code 프로젝트의 커미터였으니. 그렇게 해서 엉겁결에 올린 PR이 VS Code의 메인 브랜치에 들어가게 되었다.&lt;/p&gt;
 &lt;p&gt;그리고 다시 기다림의 시간.&lt;/p&gt;
 &lt;p&gt;메인 브랜치의 코드는 적당한 때가 되어야 실제 제품에 포함되는 법. 드디어 1.60 버전에 이 커밋이 반영되었다.&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/2b671fd33244afdbbdf50eb7cb738cb7/08c33/vscode-release-note-1.60.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 87.9746835443038%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAACXBIWXMAABYlAAAWJQFJUiTwAAACsklEQVQ4y42TZ47UQBCF9/6H4g8cAQmEgA3jceqcnO0PdXt2lkUg0VJN9Uj28wtVD/M8o7XGWEsKkbGVrOPEARzH8V+1/3Z/OPYdlyZ6PyHDjPQTws90fsbFAa0VUkq89xhjcM6VnkkIG2j9jI5LAYUCuKH8wNcu8b1PPMoBGWf6MBPSgDUaozXOWqy1GOtQ2mCcw48LOi2s2w43RQ+vlPPL+UGlNCl6oreE4LEhYXwkpkRKCTduuOlgOTHenbvkNC10NvHUSJ4byUuneawlVdNxaSWXVhVm+QNZei7nAybNqDgXhsexvwH6YeKqE5UZubqZ2i+ItBJiLJJf5WagIlsrjNEo45DG4ZwnhHACchzF/Mda8CQ8FxkQyhCDPyVnMOewzpdAXIjYYcWNK/u+lyD+SHnDxIlnM9OFFREWGpPolSmeZnaFScjpjyzrxnrA+k8Pj9PDqwq8tIqnWnDpLc+tQltPDIEYYwkkS075HiMxhiLThgGV1pJ2Pg9lfIB5HNBSIPoWJcWtJL0Q9H2PEKLMY9d19xKip+16ah1KBmGYzrHJPvg08tQoKmFxOckbs1yFWUqFUb7nnv3MPSsIt2fzO3eG0zShjUUX38yZpjl7WU1j7v9zQCouReqyHe98vHtY68il08W751airSsszrk77xks9+xfHjWdzrRvkbxtyppnMZ6bIpUpTH8HOIFdSdy5cyatdUiXaOxAnDaWbX8DLB56T9u2NE1N17Vcr1eqqirm1/WVqu352SgunSJlhj6cH4xjSfhkegeEcZyKV1JqlNYopUq9epi7sJHGr2Ve/3ZOhkDsvtB8+0T15SOXzx+oX35QN21hVtc1TdsW1nnAa+WpenPf6bKOefXG2xzmn2ga6uobo3nhCBf2bS7rlFfrrU5rOHbYN9Z1fVfbfir9BZ88aTYUvC74AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;vscode-release-note&quot;
-        title=&quot;vscode-release-note&quot;
-        src=&quot;/static/2b671fd33244afdbbdf50eb7cb738cb7/f058b/vscode-release-note-1.60.png&quot;
-        srcset=&quot;/static/2b671fd33244afdbbdf50eb7cb738cb7/c26ae/vscode-release-note-1.60.png 158w,
+&lt;figure style=&quot;max-width:848px&quot;&gt;
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/2b671fd33244afdbbdf50eb7cb738cb7/08c33/vscode-release-note-1.60.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 87.9746835443038%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAACXBIWXMAABYlAAAWJQFJUiTwAAACsklEQVQ4y42TZ47UQBCF9/6H4g8cAQmEgA3jceqcnO0PdXt2lkUg0VJN9Uj28wtVD/M8o7XGWEsKkbGVrOPEARzH8V+1/3Z/OPYdlyZ6PyHDjPQTws90fsbFAa0VUkq89xhjcM6VnkkIG2j9jI5LAYUCuKH8wNcu8b1PPMoBGWf6MBPSgDUaozXOWqy1GOtQ2mCcw48LOi2s2w43RQ+vlPPL+UGlNCl6oreE4LEhYXwkpkRKCTduuOlgOTHenbvkNC10NvHUSJ4byUuneawlVdNxaSWXVhVm+QNZei7nAybNqDgXhsexvwH6YeKqE5UZubqZ2i+ItBJiLJJf5WagIlsrjNEo45DG4ZwnhHACchzF/Mda8CQ8FxkQyhCDPyVnMOewzpdAXIjYYcWNK/u+lyD+SHnDxIlnM9OFFREWGpPolSmeZnaFScjpjyzrxnrA+k8Pj9PDqwq8tIqnWnDpLc+tQltPDIEYYwkkS075HiMxhiLThgGV1pJ2Pg9lfIB5HNBSIPoWJcWtJL0Q9H2PEKLMY9d19xKip+16ah1KBmGYzrHJPvg08tQoKmFxOckbs1yFWUqFUb7nnv3MPSsIt2fzO3eG0zShjUUX38yZpjl7WU1j7v9zQCouReqyHe98vHtY68il08W751airSsszrk77xks9+xfHjWdzrRvkbxtyppnMZ6bIpUpTH8HOIFdSdy5cyatdUiXaOxAnDaWbX8DLB56T9u2NE1N17Vcr1eqqirm1/WVqu352SgunSJlhj6cH4xjSfhkegeEcZyKV1JqlNYopUq9epi7sJHGr2Ve/3ZOhkDsvtB8+0T15SOXzx+oX35QN21hVtc1TdsW1nnAa+WpenPf6bKOefXG2xzmn2ga6uobo3nhCBf2bS7rlFfrrU5rOHbYN9Z1fVfbfir9BZ88aTYUvC74AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;vscode-release-note&quot; title=&quot;vscode-release-note&quot; src=&quot;/static/2b671fd33244afdbbdf50eb7cb738cb7/f058b/vscode-release-note-1.60.png&quot; srcset=&quot;/static/2b671fd33244afdbbdf50eb7cb738cb7/c26ae/vscode-release-note-1.60.png 158w,
 /static/2b671fd33244afdbbdf50eb7cb738cb7/6bdcf/vscode-release-note-1.60.png 315w,
 /static/2b671fd33244afdbbdf50eb7cb738cb7/f058b/vscode-release-note-1.60.png 630w,
 /static/2b671fd33244afdbbdf50eb7cb738cb7/40601/vscode-release-note-1.60.png 945w,
 /static/2b671fd33244afdbbdf50eb7cb738cb7/78612/vscode-release-note-1.60.png 1260w,
-/static/2b671fd33244afdbbdf50eb7cb738cb7/08c33/vscode-release-note-1.60.png 1570w&quot;
-        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
+/static/2b671fd33244afdbbdf50eb7cb738cb7/08c33/vscode-release-note-1.60.png 1570w&quot; sizes=&quot;(max-width: 630px) 100vw, 630px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
   &lt;/a&gt;
     &lt;/span&gt;
-&lt;em&gt;VS Code 1.60의 release note 중에서&lt;/em&gt;&lt;/p&gt;
+  &lt;figcaption&gt;VS Code 1.60의 release note 중에서&lt;/figcaption&gt;
+&lt;/figure&gt;
 &lt;p&gt;얘들아, 이거 봐! VS Code의 공식 릴리스 노트에 내 아이디가 들어갔어! 이제 우리가 한여름 땡볕 아래에서 에어컨을 켤 때마다 발명자 캐리어 님을 찬양하는 것처럼, VS Code 내장 터미널에서 커맨드 쩜을 누를 때마다 온 세상이 내 이름을 기억하게 될 거야. &lt;em&gt;영원히! Para siempre! Until the end of time! &lt;del&gt;(아님)&lt;/del&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;br&gt;
