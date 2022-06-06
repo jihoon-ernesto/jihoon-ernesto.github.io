@@ -62,8 +62,9 @@ Amplify CLI 에서 곧바로 SNS topic을 생성할 수 있으면 좋을 텐데,
 |---|---|
 | ![스크린샷-1](my-neighbor-cats-screenshot-1.png) | ![스크린샷-2](my-neighbor-cats-screenshot-2.png) |
 
-*그런데 넌 왜 고양이가 아닌 거니...*
-
+<figure>
+  <figcaption>그런데 넌 왜 고양이가 아닌 거니...</figcaption>
+</figure>
 
 발표는 잘 진행되었다. W, K와 공동 편집한 발표 자료를 가지고 데모도 간단히 잘 보여주고, 처음 설계와 달라진 점들, 또 그동안 작업을 하면서 삽질했던 내용들을 소개했다. 그리고, 테스트하면서 발견한 치명적인 결함도 소개했다.
 
@@ -77,8 +78,10 @@ Amplify CLI 에서 곧바로 SNS topic을 생성할 수 있으면 좋을 텐데,
 <br>
 
 
-![changed-architecture](my-neighbor-cats-arch-v1.2.png)
-*프로젝트 구조 - 구현하면서 달라진 설계*
+<figure>
+  <img src="my-neighbor-cats-arch-v1.2.png" alt="changed-architecture" />
+  <figcaption>프로젝트 구조 - 구현하면서 달라진 설계</figcaption>
+</figure>
 
 <br>
 <br>
@@ -103,7 +106,9 @@ Amplify CLI 에서 곧바로 SNS topic을 생성할 수 있으면 좋을 텐데,
 
 *The End*
 
-![뒷모습-고양이](cat-back.jpg)
+<figure style="max-width:320px">
+  <img src="cat-back.jpg" alt="뒷모습-고양이" />
+</figure>
 
 ### Links
 
