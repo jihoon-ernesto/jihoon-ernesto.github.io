@@ -340,6 +340,16 @@ a:focus {
   margin-bottom: var(--spacing-10);
 }
 
+/* line break */
+
+:lang(ko) {
+  // Don't break Korean words in titles and captions
+  h1, h2, h3, h4, h5, h6,
+  figcaption {
+    word-break: keep-all;
+  }
+}
+
 /* Media queries */
 
 @media (max-width: 42rem) {
