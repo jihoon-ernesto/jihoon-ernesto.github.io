@@ -1,4 +1,106 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A blog on S/W engineering]]></description><link>https://jihoon-ernesto.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 15 Jan 2023 15:30:11 GMT</lastBuildDate><item><title><![CDATA[우리 동네 고양이 - part 3]]></title><description><![CDATA[(이전 글: 우리 동네 고양이 - part 2) 방법은 멀리 있지 않았다. 미키가 여태까지 쓰고 있던 AWS Amplify를 그대로 쓰면 되는 것이었다. 단, 웹 콘솔이 아니라 CLI 이용해서. “Amplify에서 frontend와 backend…]]></description><link>https://jihoon-ernesto.github.io/my-neighbor-cats-part3/</link><guid isPermaLink="false">https://jihoon-ernesto.github.io/my-neighbor-cats-part3/</guid><pubDate>Tue, 21 Dec 2021 09:25:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;(이전 글: &lt;a href=&quot;../my-neighbor-cats-part2/&quot;&gt;우리 동네 고양이 - part 2&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A blog on S/W engineering]]></description><link>https://jihoon-ernesto.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 01 May 2023 03:06:36 GMT</lastBuildDate><item><title><![CDATA[나의 얼렁뚱땅 오픈소스 참여기 - part 3]]></title><description><![CDATA[(이전 글: 나의 얼렁뚱땅 오픈소스 참여기 - part 2) “어, 이거 왜 안 돼? 내 코드 어디 갔어!” 여느 때와 마찬가지로 VS Code…]]></description><link>https://jihoon-ernesto.github.io/my-first-open-source-part3/</link><guid isPermaLink="false">https://jihoon-ernesto.github.io/my-first-open-source-part3/</guid><pubDate>Mon, 01 May 2023 00:25:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;(이전 글: &lt;a href=&quot;../my-first-open-source-part2/&quot;&gt;나의 얼렁뚱땅 오픈소스 참여기 - part 2&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;p&gt;“어, 이거 왜 안 돼? 내 코드 어디 갔어!”&lt;/p&gt;
+&lt;p&gt;여느 때와 마찬가지로 VS Code를 열고 뭔가 작업을 하던 중이었다. 누를 때마다 뿌듯해하던 나의 터미널 단축키, &lt;code class=&quot;language-text&quot;&gt;cmd+.&lt;/code&gt;이 동작을 안 하고 있었다. 뭔가 안 좋은 느낌이 스치고 지나갔다. 무슨 일인가가 생긴 것이다. 순간, 얼마 전에 VS Code가 업데이트되었던 것이 떠올랐다. 그래, 뭔가 바뀌었어.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;*&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;그러고 나서도 한참 시간이 흘렀다. 약간의 짬이 생긴 주말 저녁이었다. 성질 나는데 그 문제나 한번 알아볼까? 물론 진짜 성질이 난 건 아니었다. 다만, 나의 유일무이한(!) 오픈소스 업적이 훼손된 것에 대한 찜찜함이 마음 한켠에 남아있던 참이었다.&lt;/p&gt;
+&lt;p&gt;일단, 어느 시점에 내 코드가 사라진 것인지 조사했다. 사라진 코드를 찾는 커맨드는 &lt;code class=&quot;language-text&quot;&gt;git log -G&lt;/code&gt; 라고 검색이 되었다. VS Code의 최신 코드를 pull 받은 후, 그걸로 내 코드의 주석 부분을 검색했다. 코드 자체는 이후의 리팩토링 등으로 변경되었을 수도 있으므로 주석을 찾는 게 더 나을 거라는 생각이 들었다. 내 코드의 주석은 &lt;code class=&quot;language-text&quot;&gt;// Break: ctrl+C&lt;/code&gt; 이었으므로&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; log -G&lt;span class=&quot;token string&quot;&gt;&quot;//\sBreak:\sctrl\+C&quot;&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;--oneline&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;으로 찾아보았다. 나왔다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;de450f991c2 &lt;span class=&quot;token function&quot;&gt;add&lt;/span&gt; basic contextual commands &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token comment&quot;&gt;#160952)&lt;/span&gt;
+58af29738a1 Add terminal keybinding &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; cmd+. → ctrl+c to match macOS Terminal
+&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;END&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;58af29738a1&lt;/code&gt;가 내가 작성한 커밋이었으니, 그 위에 표시된 &lt;code class=&quot;language-text&quot;&gt;de450f991c2&lt;/code&gt;가 문제의 커밋, 내 코드를 무자비하게 없애버린 커밋일 터였다. GitHub의 VS Code 저장소에서 검색을 하니 그 커밋에 대한 아래 페이지로 연결이 되었다.&lt;/p&gt;
+&lt;figure&gt;
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/54bef095d0ce32eab7b6f7d85f65aa21/bfd4b/vscode-commit-deleting-my-code.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 55.69620253164557%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB30lEQVQoz22SSW7cMBBFdf/T+C7ZBIFjwT1poMR5kChKLxC7YXuRxcOvIoka2Uw60M2B2+Q5beufuJCwPmJcqPrkeSa1RcwKbQPSuPpGGYePC423Dq0UShuMdczSIJTDhYg7g7wCVj88/ZCWmjStmTVvLOs3zSRm/raf9OPEME70QtLJVCsMaX2x1Ownp/9TfUzYkOhlwKeVRoiJ+/1RK9TGYp3DxVAz57xV/R95K1XdOZ4XMSWatKzMyqCkxFqLUgprDFpJcs7AAccOx/HFse/fHDt7KRhjCT7QbDsMKpBipJTzMtOphQ8R6ZXnNhmu4slNaG6T5jFbRptQqXwxxw23FJqt7HUZo5iw1rFEx+gjN+OxOfM+Ot4Hzd9O0A4Tc0iYNWPzVnFbqWryRiqFJheQSjGMAh8C3igea8e1XJlXyYeaaac7n9OFm+7po2KICpklcjOY3aI2gyyGsEeat7c3RiEYR0GI57dQ3CdPb3fiBjYf2HUnbAdph1he/LDDyQZLgWaaZ7Q2PLquVrpEy0Mm/oyOi7EItzDYRG8To42VXnseytPpwOiWOj8RMm7ZaABG+dzu2XJIjsFmPubE4z7wfu1pLx3tdeRXO/D7Imh7VQPPMaOXglkP9NlF3vkHmp5MbXPyX/YAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;the commit deleting my code&quot; title=&quot;the commit deleting my code&quot; src=&quot;/static/54bef095d0ce32eab7b6f7d85f65aa21/f058b/vscode-commit-deleting-my-code.png&quot; srcset=&quot;/static/54bef095d0ce32eab7b6f7d85f65aa21/c26ae/vscode-commit-deleting-my-code.png 158w,
+/static/54bef095d0ce32eab7b6f7d85f65aa21/6bdcf/vscode-commit-deleting-my-code.png 315w,
+/static/54bef095d0ce32eab7b6f7d85f65aa21/f058b/vscode-commit-deleting-my-code.png 630w,
+/static/54bef095d0ce32eab7b6f7d85f65aa21/40601/vscode-commit-deleting-my-code.png 945w,
+/static/54bef095d0ce32eab7b6f7d85f65aa21/78612/vscode-commit-deleting-my-code.png 1260w,
+/static/54bef095d0ce32eab7b6f7d85f65aa21/bfd4b/vscode-commit-deleting-my-code.png 1871w&quot; sizes=&quot;(max-width: 630px) 100vw, 630px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+  &lt;figcaption class=&quot;left&quot;&gt;내 코드를 지워버린 문제의 커밋&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;그리고 이 커밋을 포함한 PR은 #160952 라고 나와 있었고,&lt;/p&gt;
+&lt;figure&gt;
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/3caf2988d3027981b97070a3dc8a8813/bfd4b/vscode-pr-of-the-commit.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 55.69620253164557%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAABqElEQVQoz2WRW4/TQAxG8///Fw8IIYGE0L6wArpVSq5zvznpQTPdlrZY8jgZOyf2525WgX72HEbHpDzKOJTx2JAwPmJcwLhrDGgbmFfDOK+tdlEWZT3WRlISupA9Lhq0sWhtmIeReRjQq8IYi1Kq5UJM+JiwLhBSxvlALkKRDZGdXo/0eqL7/mngy4cj8zLR9yfGcWScF46ngX7S9Itl0p5939n2nWc7n88tfvz9lc9v3+j618yvF0tMkZQzKSViFlwSdNpYvKB8IeeMiPwHqrH6JoJsQnfqD2i7sCqD9QFT9XAXz7kQQyTEeBuvjltHv7zLDRiSJ+RAp5eVeVacJk3KpUGaF2kjbvu5uWw727a3mgpWWvNnGB66rdbVo3ZhjGkflFIoRZpm179fvVqWgkjBO884Tk2iatf6rh6uJocRY6uWiRgjzrn2vL8v4l6zalXPGNODjg1YL7wPDWhvwHSJT8D7TusktZF/OZ6BQwPWBTRgTA9j30OvHRrn3nXekH1r9TfgNE1Y69pCqp5K6QZPKbe7Z2DMiZfjD16nAwfV83N5Y/YrfwGaDFb8h3e5AQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;the PR of the commit&quot; title=&quot;the PR of the commit&quot; src=&quot;/static/3caf2988d3027981b97070a3dc8a8813/f058b/vscode-pr-of-the-commit.png&quot; srcset=&quot;/static/3caf2988d3027981b97070a3dc8a8813/c26ae/vscode-pr-of-the-commit.png 158w,
+/static/3caf2988d3027981b97070a3dc8a8813/6bdcf/vscode-pr-of-the-commit.png 315w,
+/static/3caf2988d3027981b97070a3dc8a8813/f058b/vscode-pr-of-the-commit.png 630w,
+/static/3caf2988d3027981b97070a3dc8a8813/40601/vscode-pr-of-the-commit.png 945w,
+/static/3caf2988d3027981b97070a3dc8a8813/78612/vscode-pr-of-the-commit.png 1260w,
+/static/3caf2988d3027981b97070a3dc8a8813/bfd4b/vscode-pr-of-the-commit.png 1871w&quot; sizes=&quot;(max-width: 630px) 100vw, 630px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+  &lt;figcaption class=&quot;left&quot;&gt;내 코드를 지워버린 문제의 커밋의 PR&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;이건 다시 이슈 번호 #151937 에 대한 것이라고 했다.&lt;/p&gt;
+&lt;figure&gt;
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/756230b9529ce55b74bf6d384fc31f95/bfd4b/vscode-issue-of-the-pr.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 55.69620253164557%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAAByElEQVQoz2WS227bMBBE/f8/1j40KBrkIUBToHYTy5bE+12UdApRzq1dYLgEiZ3dGfIgdKQTgVPvGHXE+oD1ERcyLiSsTy2/wriIUJZBKLT1SO3QLuBcIufKIZaADwY1jBhtUNoipEZb1/ZS6ZaVcRjr8SESc2m5TJWpztS60Jmx4fB4N/LjywtSCrquYxhG+r5HCIkQgst1YJQa5zwhRj7FurKua9t+PX7n2597Dr8eFM8/I9Ncmab61nXvXMnTQl1e61fmeaHOM8uNqJ0ty1uPw8PjPdqpJlMqg2yyDSHEJsv70GBdwIZCSIUQEzEmtDawrJ+GPmzLdumcI4TQsvMR48LuV4ztPudMKjPzjSClRHfuuCrJUY0YoZlC2gmNdUipWqFSilF7OuEwPjXZm8SPvm1R6szT6cLd05H7ywuqFxQb3gmHcSSX0qRaaymlNNS6ke3mvwPqVKml8m80QuscUqk3QmMMPgRSym3izYpSJpbl/VWnpXDsX+i9oHeCqx2x2d8mNIbT8ff+VaREG0vO5b/ur2Tnp8LlFHgWZ65mREWDCIpQ4k44TdNOknIze5O6fvgWH7GF7it6yDhryTFTcqGk0vz9C2oaUqzDKBkPAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;the issue of the PR of the commit&quot; title=&quot;the issue of the PR of the commit&quot; src=&quot;/static/756230b9529ce55b74bf6d384fc31f95/f058b/vscode-issue-of-the-pr.png&quot; srcset=&quot;/static/756230b9529ce55b74bf6d384fc31f95/c26ae/vscode-issue-of-the-pr.png 158w,
+/static/756230b9529ce55b74bf6d384fc31f95/6bdcf/vscode-issue-of-the-pr.png 315w,
+/static/756230b9529ce55b74bf6d384fc31f95/f058b/vscode-issue-of-the-pr.png 630w,
+/static/756230b9529ce55b74bf6d384fc31f95/40601/vscode-issue-of-the-pr.png 945w,
+/static/756230b9529ce55b74bf6d384fc31f95/78612/vscode-issue-of-the-pr.png 1260w,
+/static/756230b9529ce55b74bf6d384fc31f95/bfd4b/vscode-issue-of-the-pr.png 1871w&quot; sizes=&quot;(max-width: 630px) 100vw, 630px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+  &lt;figcaption class=&quot;left&quot;&gt;내 코드를 지워버린 문제의 커밋의 PR에 대한 issue&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;뭔가 복잡하게 돌아가는 것을 보니… 누군가가 그냥 심심해서 내 코드를 지운 건 아닌 것 같았다.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;*&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;좀 더 추적 조사한 결과, 결국 원인이 밝혀졌다. ‘Terminal Quick Fixes’ 라고 이름붙은 기능이 들어가기 위해서 내 코드가 희생된 것이었다. T_T&lt;/p&gt;
+&lt;figure&gt;
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/3ddcfc74febba4dbac6047f3a1adae94/4779f/vscode-release-note-1-72.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 66.45569620253164%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAACv0lEQVQ4y5WSy09TURDGu2NnCRBUQqUNUbGKxsiiLoxgBRGMMfGx0WjCRmoAqRYwJGriI3GlcWtSDMbaSg1x65I/Qd2RGB+VRwu3pdxn7+tn7imILlw4yZc5OWfmm5lvju/G8G1uTtzjzsQk4+OTjIzcIj6aIB4fY9Tzt8aq53iCm6MJhofjDA2Nkkjc4d79R9ydmCD28AUXX85z5dkHfAC2ZbJpmm4gqyqaqlIxK9imiWtaOBUTxzSxLQvLsjBNU8B1XcyKATgi3+c9rq2tbTw6LOcLFKQS5XJZ3JeLJRSphCwVkVckyqU1isWigBfjFdY1DdcFx3XxOY6DpihYG12WvGBJYnV1tQpJqhKUFaSyjKxq6LouIDq1bBTNwGP0SH2241BSdLSKJdpXVRV5fR1VUahUjN+F/mWm7aAa1Rgv32fZNvnSepXQcfj+7SvzX77yY2mZ3FKehYUl8rkcuZ85FhYXWFpcJJ/Ps7KyQqFQEIUNQ8ebVGjoHXRNrS5EVbl29SrHot30nb/E8Z5+enr6ORON0t3bTf/ZM/T39dHZ2UlXVxeRSITZ2VlBpgkdNzXUNEHojdvbc4KW5u20h3dzILyHcDhMe3s7oVCI5uZmmpqahA8EAtTX15NKpfiTw2fbttimJ6imrnOq9zQtkQt0nBtiX+dlduwMEmpoILArQGNjI36/n9raWurq6qipqeHV9LQgsm1ra2SvM88busqDJ8+5/eQ1k09nGHucZDAW4/rgoMDgBmKxmMDAwABzc3PYLni7AHeL0PsCW2bzP7Yq64L0r5Grf8piZuYdU9MpkqkM06ks7zNvSadTZN9lmclmeZN+QyaTIZ1OM5VM8vHTZ5ZlE820t0beFFSRFU5Go7SED7K34yi79x8h0raPSLiNo4cP0XYgTGtrK6FgkGAwiN+/jWRyigpgmFUNfwHk/EN1qhluYwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;the release note of VS Code 1.72&quot; title=&quot;the release note of VS Code 1.72&quot; src=&quot;/static/3ddcfc74febba4dbac6047f3a1adae94/f058b/vscode-release-note-1-72.png&quot; srcset=&quot;/static/3ddcfc74febba4dbac6047f3a1adae94/c26ae/vscode-release-note-1-72.png 158w,
+/static/3ddcfc74febba4dbac6047f3a1adae94/6bdcf/vscode-release-note-1-72.png 315w,
+/static/3ddcfc74febba4dbac6047f3a1adae94/f058b/vscode-release-note-1-72.png 630w,
+/static/3ddcfc74febba4dbac6047f3a1adae94/40601/vscode-release-note-1-72.png 945w,
+/static/3ddcfc74febba4dbac6047f3a1adae94/78612/vscode-release-note-1-72.png 1260w,
+/static/3ddcfc74febba4dbac6047f3a1adae94/4779f/vscode-release-note-1-72.png 1837w&quot; sizes=&quot;(max-width: 630px) 100vw, 630px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+  &lt;figcaption class=&quot;left&quot;&gt;VS Code 1.72 버전의 release note&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/da5ff20270eaeecfd4f2cecae0993655/acf8f/vscode-twitter-on-terminal-quick-fixes.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 80.37974683544303%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC9klEQVQ4y42UW2gTWRzG49PipaLW1l7spjEtaaxNTZtW6yW1GqniBRXEG15QWu8GdS2CLvsg7NP6sLDvCooFkV11ba1XBN/VB+29imJi0rRNMpNJJk0mP5nTpnhpxA8+zpk5nO//fTPnfwzdIxrJFAKpVEpQS6UgmUCRZQbevkNRFJLJJKOjo98wMc5REomE2GcIyxEkSSaiKBOiOgaCcfoHJXxeD598fkLhMD+CNm7GEAqFGBoeJhAYmnCowycpfByWkCWJaCxGNBolpqrCTSaMCYbDSLJMMBhE07SJxbgSYngoIIoNBgL4/YP4/H5GRkaIxWJEIooYxVxRRGQdhsmq6Hj3/gNd3T309vaNsa+f7p5eenr76Osf4E1nl3ju7Orm9ZtOkVAIpmN+SR26A/1HpCv/LL4TTMd+8fIVV661cq31Jrdu/8/te/e51/GI9gePuf/wCXfbOvj3Thv/3W2nreMRT549R1XVryPrgmlHp879jiGriLlGG9PnlZGVb6GoxEpOsY0c02Ky8q3MLFgoxmyjDWP5MjyffJMJJsXcff4SuWYHy9Zuw1rjEixzNFBgWUJ2cRVzTdViPa+0luxiO6aKlXh9/syCJ377Q2zYsquJho07cW3ew+qNu6lzbcNSvQaTzUmBZSm55hpmGxdjttXj8w1mjnzU3cLU2UUsql5BZe0qKmvqsTmc2Jc2UF23htoVa6lwOClcUMGsvBLmmyvxTh55TPDYyTP8MiOHX01WnKsa2b3nIDt27mO1awON67ewbsNWXI2byJ5nJDffhNG8EI/Hm1mw+WQLhml5lNmXU1pVh9m+nPK6RiyOesyLlmC1OyksrWJ6TglTZhQyp6gcj3cSh5o29g2fdlznUHMTx89d4uyf/9By+Sotf93g4t+tNLsvsK/Jzf7Dp9nb5Gb73iMcOHqWYCj8vSD6edSbXUsSj8dFH8dVFVIapJIwXjDjwf5WMN0pckQhokRRolGiMZWwJItRfx9T4+NpvqQmLofPvyEQDdQ4zSsAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;Tweet on Terminal Quick Fixes&quot; title=&quot;Tweet on Terminal Quick Fixes&quot; src=&quot;/static/da5ff20270eaeecfd4f2cecae0993655/f058b/vscode-twitter-on-terminal-quick-fixes.png&quot; srcset=&quot;/static/da5ff20270eaeecfd4f2cecae0993655/c26ae/vscode-twitter-on-terminal-quick-fixes.png 158w,
+/static/da5ff20270eaeecfd4f2cecae0993655/6bdcf/vscode-twitter-on-terminal-quick-fixes.png 315w,
+/static/da5ff20270eaeecfd4f2cecae0993655/f058b/vscode-twitter-on-terminal-quick-fixes.png 630w,
+/static/da5ff20270eaeecfd4f2cecae0993655/40601/vscode-twitter-on-terminal-quick-fixes.png 945w,
+/static/da5ff20270eaeecfd4f2cecae0993655/78612/vscode-twitter-on-terminal-quick-fixes.png 1260w,
+/static/da5ff20270eaeecfd4f2cecae0993655/acf8f/vscode-twitter-on-terminal-quick-fixes.png 1340w&quot; sizes=&quot;(max-width: 630px) 100vw, 630px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+  &lt;figcaption class=&quot;left&quot;&gt;Terminal Quick Fixes 기능을 소개하는 트윗&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;그래, 그랬구나. 그런 것이었어…&lt;/p&gt;
+&lt;p&gt;코드란 원래 그런 것이다. 필요에 의해 만들어지고, 얼마간 제 역할을 한 다음, 때가 되면 사라지는 것. 문제는, 그게 나의 유일한 오픈소스 업적이었고, 제 역할을 한 시간이 너무나 짧았다는 것. 흙흙흙. 이렇게 해서 에어컨의 발명자 캐리어 님과 어깨를 나란히 해보려던 나의 가여운 소망은 가벼이 날아가버리고 말았다. (길이도) 짧았던 내 코드는 (수명도) 짧게 사라졌다.&lt;/p&gt;
+&lt;p&gt;조금 아쉽지만, 뭐 그래도, 어쨌든 이렇게 이야기거리 하나는 남았다. 그러면 되었다.&lt;/p&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;h3&gt;Links&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://git-scm.com/docs/git-log#Documentation/git-log.txt--Gltregexgt&quot;&gt;git-log - Show commit logs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/microsoft/vscode/commit/de450f991c2daa1f3207dfff4a4d7a3ffb2fd699&quot;&gt;VS Code - commit de450f991c2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/microsoft/vscode/pull/160952&quot;&gt;VS Code - PR #160952&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/microsoft/vscode/issues/151937&quot;&gt;VS Code - issue #151937&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://code.visualstudio.com/updates/v1_72#_terminal-quick-fixes&quot;&gt;VS Code release note - version 1.72&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://twitter.com/code/status/1578085905188913161?lang=en&quot;&gt;Tweet on Terminal Quick Fixes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[우리 동네 고양이 - part 3]]></title><description><![CDATA[(이전 글: 우리 동네 고양이 - part 2) 방법은 멀리 있지 않았다. 미키가 여태까지 쓰고 있던 AWS Amplify를 그대로 쓰면 되는 것이었다. 단, 웹 콘솔이 아니라 CLI 이용해서. “Amplify에서 frontend와 backend…]]></description><link>https://jihoon-ernesto.github.io/my-neighbor-cats-part3/</link><guid isPermaLink="false">https://jihoon-ernesto.github.io/my-neighbor-cats-part3/</guid><pubDate>Tue, 21 Dec 2021 09:25:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;(이전 글: &lt;a href=&quot;../my-neighbor-cats-part2/&quot;&gt;우리 동네 고양이 - part 2&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
 &lt;br&gt;
 &lt;p&gt;방법은 멀리 있지 않았다. 미키가 여태까지 쓰고 있던 AWS Amplify를 그대로 쓰면 되는 것이었다. 단, 웹 콘솔이 아니라 CLI 이용해서.&lt;/p&gt;
 &lt;p&gt;“Amplify에서 frontend와 backend 연결하는 방법 있는 것 아시잖아요? git 브랜치를 여러 개 만들 수 있듯이 backend 환경을 여러 개 만들 수 있어요. 각각의 backend 환경을 상황에 맞게 알맞은 git 브랜치에 연결해서 사용하면 돼요.”&lt;/p&gt;
