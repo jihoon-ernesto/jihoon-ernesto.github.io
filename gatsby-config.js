@@ -2,10 +2,10 @@ module.exports = {
   siteMetadata: {
     title: `나의 얼렁뚱땅 프로그래밍`,
     author: {
-      name: `Jihoon LEE (also known as Ernesto)`,
-      summary: `who is a S/W engineer`,
+      name: `Jihoon LEE (aka Ernesto)`,
+      summary: `a software engineer`,
     },
-    description: `A blog on S/W engineering`,
+    description: `a blog on software engineering`,
     siteUrl: `https://jihoon-ernesto.github.io/`,
     social: {
       github: `jihoon-ernesto`,
@@ -107,7 +107,7 @@ module.exports = {
               }
             `,
             output: "/rss.xml",
-            title: "Gatsby Starter Blog RSS Feed",
+            title: "나의 얼렁뚱땅 프로그래밍",
           },
         ],
       },
