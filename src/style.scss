@@ -275,6 +275,8 @@ a:focus {
 }
 
 .main-heading {
+  color: var(--color-text-light);
+  font-weight: lighter;
   font-size: var(--fontSize-7);
   margin: 0;
 }
