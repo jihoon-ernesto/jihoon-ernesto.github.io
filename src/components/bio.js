@@ -35,7 +35,7 @@ const Bio = () => {
       {githubUsername && (
         <img
           className="bio-avatar"
-          src={`https://github.com/${githubUsername}.png`}
+          src={`https://github.com/${githubUsername}.png?size=50`}
           width={50}
           height={50}
           alt="GitHub profile"
