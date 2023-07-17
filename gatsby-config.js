@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `나의 얼렁뚱땅 프로그래밍`,
+    title: `나의 얼렁뚱땅`,
     author: {
       name: `Jihoon LEE (aka Ernesto)`,
       summary: `a software engineer`,
@@ -109,7 +109,7 @@ module.exports = {
               }
             `,
             output: "/rss.xml",
-            title: "나의 얼렁뚱땅 프로그래밍",
+            title: "나의 얼렁뚱땅",
           },
         ],
       },
