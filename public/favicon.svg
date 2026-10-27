@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>나의 얼렁뚱땅 — 얼</title>
+  <rect width="64" height="64" rx="15" fill="#286853"/>
+  <g fill="none" stroke="#fcfcf8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="23" cy="22" r="8"/>
+    <path d="M43 12v21M35 23h8M16 41h31v7H17v8h31"/>
+  </g>
+</svg>
