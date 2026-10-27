@@ -183,6 +183,14 @@ content/blog/my-new-post/
 
 그래서 지금 브라우저 탭에는 초록색 바탕의 `?!`가 떠 있다.
 
+<figure>
+  <div style="display:grid;grid-template-columns:repeat(2,minmax(0,128px));justify-content:center;gap:24px">
+    <img src="favicon-eol.png" alt="초록색 바탕에 흰색 ‘얼’을 그린 첫 번째 파비콘" width="128" height="128" loading="lazy" />
+    <img src="favicon-punctuation.png" alt="초록색 바탕에 흰색 ‘?!’를 그린 최종 파비콘" width="128" height="128" loading="lazy" />
+  </div>
+  <figcaption>처음 만들었던 ‘얼’ 아이콘과 최종 선택한 ‘?!’ 아이콘.</figcaption>
+</figure>
+
 Gatsby에서 Astro로 옮기는 작업은 그렇게 끝났다. 글과 주소는 그대로이고, 그 뒤에서 사이트를 만드는 도구와 배포하는 과정이 달라졌다.
 
 이 글이 이사한 블로그의 첫 새 글이 되면 좋겠다.
