@@ -58,6 +58,12 @@ Markdown의 HTML은 저장소 작성자가 관리하는 신뢰된 콘텐츠로 �
 
 주소는 계속 `https://jihoon-ernesto.github.io/`입니다. 사용자 사이트이므로 별도 `base` 경로를 설정하지 않습니다. 별도 PAT나 클라우드 서비스는 필요하지 않습니다. 배포 job만 Pages 쓰기·OIDC 권한을 받으며, PR 빌드는 저장소 읽기 권한만 가집니다. Actions는 커밋 SHA로 고정했고 Dependabot이 npm과 Actions 업데이트를 월별로 제안합니다.
 
+## 의존성 업데이트
+
+Dependabot은 월별로 업데이트를 제안합니다. GitHub Actions 업데이트는 하나의 PR로 묶어서 빌드와 실제 배포의 호환성을 함께 확인합니다. 자동 머지는 설정하지 않습니다.
+
+TypeScript는 현재 6.0.3을 유지합니다. `@astrojs/check` 0.9.12의 지원 범위가 TypeScript 5·6이어서 TypeScript 7 업데이트는 설치 단계에서 실패합니다. 반복되는 비호환 PR을 막기 위해 TypeScript **7.x만** Dependabot 버전 업데이트에서 제외했습니다. Astro 검사 도구가 TypeScript 7을 지원하면 `.github/dependabot.yml`의 해당 `ignore` 항목을 제거하고 다시 검증합니다. 다른 패키지와 TypeScript 6 계열 업데이트는 계속 확인합니다.
+
 ## 롤백
 
 문제가 있으면 Settings → Pages의 Source를 **Deploy from a branch**, 브랜치를 **gh-pages / (root)**로 되돌립니다. 이전 Gatsby 배포 브랜치는 이 마이그레이션에서 수정하지 않습니다. 필요하면 GitHub Pages의 재빌드를 요청하고 기존 사이트가 응답하는지 확인합니다.

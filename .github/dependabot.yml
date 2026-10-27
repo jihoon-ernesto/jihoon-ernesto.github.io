@@ -4,6 +4,11 @@ updates:
     directory: /
     schedule:
       interval: monthly
+    # @astrojs/check 0.9.12 supports TypeScript 5/6, not the TypeScript 7 API.
+    # Revisit this exclusion when the Astro checker supports TypeScript 7.
+    ignore:
+      - dependency-name: typescript
+        versions: ['7.x']
     groups:
       astro:
         patterns: [astro, '@astrojs/*']
@@ -11,3 +16,6 @@ updates:
     directory: /
     schedule:
       interval: monthly
+    groups:
+      github-actions:
+        patterns: ['*']
