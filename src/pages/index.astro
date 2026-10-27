@@ -1,0 +1,21 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import Bio from '../components/Bio.astro';
+const posts = (await getCollection('blog')).sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+const date = (value: Date) => new Intl.DateTimeFormat('ko-KR', { dateStyle: 'long', timeZone: 'Asia/Seoul' }).format(value);
+---
+<Layout home>
+  <section class="intro" aria-label="소개"><Bio /></section>
+  <section aria-labelledby="posts-title">
+    <div class="section-heading"><h2 id="posts-title">모든 글</h2><span>{posts.length}개의 기록</span></div>
+    <ol class="post-list">
+      {posts.map(post => <li><article class="post-card">
+        <time datetime={post.data.date.toISOString()}>{date(post.data.date)}</time>
+        <h3><a href={`/${post.id}/`}>{post.data.title}</a></h3>
+        <p>{post.data.description}</p>
+        <div class="tags">{post.data.tags.map(tag => <span>{tag}</span>)}</div>
+      </article></li>)}
+    </ol>
+  </section>
+</Layout>

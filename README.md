@@ -1,110 +1,64 @@
-Published URL:<br>
-[`https://jihoon-ernesto.github.io/`](https://jihoon-ernesto.github.io/)
+# 나의 얼렁뚱땅
 
----
+Jihoon LEE (aka Ernesto)의 개인 블로그. Astro의 정적 HTML을 GitHub Pages에서 제공합니다.
 
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.com">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's blog starter
-</h1>
+## 로컬 실행
 
-Kick off your project with this blog boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+Node.js **24 LTS**를 사용합니다 (`.nvmrc`).
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
+```sh
+npm ci
+npm run dev
+```
 
-## 🚀 Quick start
+개발 서버 주소는 터미널에 표시됩니다. 배포 결과를 그대로 확인하려면:
 
-1.  **Create a Gatsby site.**
+```sh
+npm run check
+npm run build
+npm test
+npm run preview -- --host 127.0.0.1
+```
 
-    Use the Gatsby CLI ([install instructions](https://www.gatsbyjs.com/docs/tutorial/part-0/#gatsby-cli)) to create a new site, specifying the blog starter.
+## 글 작성
 
-    ```shell
-    # create a new Gatsby site using the blog starter
-    gatsby new my-blog-starter https://github.com/gatsbyjs/gatsby-starter-blog
-    ```
+기존 글과 이미지는 `content/blog/<slug>/`에 그대로 있습니다.
 
-1.  **Start developing.**
+```text
+content/blog/my-post/index.md
+content/blog/my-post/photo.jpg
+```
 
-    Navigate into your new site’s directory and start it up.
+`index.md`의 frontmatter에 `title`, `date`, `description`, 선택적으로 `tags`를 작성합니다. 기존 글과 동일하게 Markdown 이미지 또는 `<figure><img src="photo.jpg">…</figure>`를 사용할 수 있습니다. 빌드 전 준비 스크립트가 이미지 원본을 `public/<slug>/`로 복사하며 이 복사본은 Git에서 제외합니다. 글은 `/<slug>/`에 생성됩니다.
 
-    ```shell
-    cd my-blog-starter/
-    gatsby develop
-    ```
+## 이전 시 보존한 것
 
-1.  **Open the source code and start editing!**
+- 원본 Markdown 6개와 함께 저장된 이미지: 내용과 바이트를 변경하지 않았습니다.
+- 글 URL과 끝의 `/`, 글 사이의 상대 링크.
+- Giscus 저장소·저장소 ID·카테고리 ID·`pathname` 매핑과 기존 표시 설정. 댓글 데이터는 기존 GitHub Discussions에 남습니다. 로컬에서도 댓글 기능은 실제 Discussions에 연결되므로 테스트 댓글을 작성하지 마세요.
+- `/rss.xml`: 기존 항목의 GUID·발행일, 전체 본문. 이미지와 링크는 피드에서 절대 주소로 변환합니다.
+- 과거 `/static/...` 주소: 기존 배포의 정적 파일을 `public/static/`에 보관합니다. 외부에서 공유된 옛 이미지 주소도 유효합니다.
+- `/using-typescript/`: 기존 예제 URL은 간단한 안내 페이지로 남겨둡니다.
 
-    Your site is now running at `http://localhost:8000`!
+`npm test`는 생성된 글, 원본 이미지의 동일성, 기존 정적 파일, 내부 링크, canonical, Giscus 설정, RSS, sitemap, 404를 확인합니다. 향후 기존 글의 slug를 바꾸면 댓글 매핑과 외부 링크가 끊어질 수 있으니 주소는 유지하세요.
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby Tutorial](https://www.gatsbyjs.com/docs/tutorial/part-4/#use-graphiql-to-explore-the-data-layer-and-write-graphql-queries)._
+Markdown의 HTML은 저장소 작성자가 관리하는 신뢰된 콘텐츠로 취급합니다. 사용자 입력을 그대로 글 HTML에 추가하지 않습니다. 본문에는 React hydration이 없고 코드 강조도 빌드 시 수행됩니다. 외부 JavaScript는 댓글의 Giscus에 한정됩니다.
 
-    Open the `my-blog-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+## GitHub Pages 배포 — 미리보기 확인 후
 
-## 🚀 Quick start (Gatsby Cloud)
+**이 마이그레이션을 머지하는 것만으로 배포되지 않습니다.** PR과 main push는 검증·빌드 아티팩트 생성까지만 수행합니다. 현재 공개 사이트와 Pages 설정은 그대로 둡니다.
 
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
+최초 전환 시:
 
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-blog)
+1. 미리보기를 확인한 뒤 이 브랜치를 main에 머지합니다.
+2. 저장소 **Settings → Pages → Build and deployment → Source**를 **GitHub Actions**로 바꿉니다. 기존 `gh-pages` 브랜치는 롤백용으로 보존합니다.
+3. **Actions → Build and deploy Astro → Run workflow**에서 **main**을 선택하여 수동 실행합니다.
+4. 빌드·검증이 통과하면 `github-pages` 환경에 배포됩니다. 해당 환경에 별도의 승인 규칙이 있으면 GitHub에서 승인합니다.
 
-## 🧐 What's inside?
+주소는 계속 `https://jihoon-ernesto.github.io/`입니다. 사용자 사이트이므로 별도 `base` 경로를 설정하지 않습니다. 별도 PAT나 클라우드 서비스는 필요하지 않습니다. 배포 job만 Pages 쓰기·OIDC 권한을 받으며, PR 빌드는 저장소 읽기 권한만 가집니다. Actions는 커밋 SHA로 고정했고 Dependabot이 npm과 Actions 업데이트를 월별로 제안합니다.
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+이후에도 공개 반영은 main에서 이 워크플로를 수동 실행할 때만 일어납니다.
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
+## 롤백
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
-
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
-
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
-
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
-
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-browser/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
-
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/) for more detail).
-
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
-
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-ssr/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
-
-9.  **`LICENSE`**: This Gatsby starter is licensed under the 0BSD license. This means that you can see this file as a placeholder and replace it with your own license.
-
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
-
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
-
-12. **`README.md`**: A text file containing useful reference information about your project.
-
-## 🎓 Learning Gatsby
-
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.com/). Here are some places to start:
-
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
-## 💫 Deploy
-
-[Build, Deploy, and Host On The Only Cloud Built For Gatsby](https://www.gatsbyjs.com/products/cloud/)
-
-Gatsby Cloud is an end-to-end cloud platform specifically built for the Gatsby framework that combines a modern developer experience with an optimized, global edge network.
-
-<!-- AUTO-GENERATED-CONTENT:END -->
+문제가 있으면 Settings → Pages의 Source를 **Deploy from a branch**, 브랜치를 **gh-pages / (root)**로 되돌립니다. 이전 Gatsby 배포 브랜치는 이 마이그레이션에서 수정하지 않습니다. 필요하면 GitHub Pages의 재빌드를 요청하고 기존 사이트가 응답하는지 확인합니다.

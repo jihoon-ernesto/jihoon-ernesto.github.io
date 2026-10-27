@@ -1,58 +1,27 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "jihoon-ernesto-blog",
+  "version": "1.0.0",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  },
-  "dependencies": {
-    "gatsby": "^5.10.0",
-    "gatsby-plugin-feed": "^5.10.0",
-    "gatsby-plugin-gatsby-cloud": "^5.10.0",
-    "gatsby-plugin-google-analytics": "^5.10.0",
-    "gatsby-plugin-manifest": "^5.10.0",
-    "gatsby-plugin-offline": "^6.10.0",
-    "gatsby-plugin-sass": "^6.10.0",
-    "gatsby-plugin-sharp": "^5.10.0",
-    "gatsby-remark-copy-linked-files": "^6.10.0",
-    "gatsby-remark-images": "^7.10.0",
-    "gatsby-remark-prismjs": "^7.10.0",
-    "gatsby-remark-responsive-iframe": "^6.10.0",
-    "gatsby-remark-smartypants": "^6.10.0",
-    "gatsby-source-filesystem": "^5.10.0",
-    "gatsby-transformer-remark": "^6.10.0",
-    "gatsby-transformer-sharp": "^5.10.0",
-    "prismjs": "^1.29.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-helmet": "^6.1.0",
-    "sass": "^1.54.0",
-    "typeface-merriweather": "0.0.72",
-    "typeface-montserrat": "0.0.75"
-  },
-  "devDependencies": {
-    "gh-pages": "^3.2.3",
-    "prettier": "^2.6.2"
-  },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "0BSD",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0 <25"
   },
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "deploy": "gatsby build && gh-pages -d public",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "gatsby develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "dev": "node scripts/prepare-assets.mjs && astro dev",
+    "build": "node scripts/prepare-assets.mjs && astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "test": "node scripts/verify-migration.mjs"
+  },
+  "dependencies": {
+    "@astrojs/markdown-remark": "7.3.4",
+    "@astrojs/rss": "4.0.19",
+    "@astrojs/sitemap": "3.7.4",
+    "astro": "7.4.2"
+  },
+  "devDependencies": {
+    "@astrojs/check": "0.9.12",
+    "cheerio": "1.2.0",
+    "typescript": "6.0.3"
   }
 }
