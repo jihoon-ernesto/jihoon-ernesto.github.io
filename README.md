@@ -44,20 +44,19 @@ content/blog/my-post/photo.jpg
 
 Markdown의 HTML은 저장소 작성자가 관리하는 신뢰된 콘텐츠로 취급합니다. 사용자 입력을 그대로 글 HTML에 추가하지 않습니다. 본문에는 React hydration이 없고 코드 강조도 빌드 시 수행됩니다. 외부 JavaScript는 댓글의 Giscus에 한정됩니다.
 
-## GitHub Pages 배포 — 미리보기 확인 후
+## GitHub Pages 자동 배포
 
-**이 마이그레이션을 머지하는 것만으로 배포되지 않습니다.** PR과 main push는 검증·빌드 아티팩트 생성까지만 수행합니다. 현재 공개 사이트와 Pages 설정은 그대로 둡니다.
+**main에 커밋을 push하거나 PR을 main에 머지하면 자동으로 배포됩니다.** 빌드·타입 검사·콘텐츠 검증·보안 검사가 모두 통과해야 공개 사이트가 갱신됩니다. PR 브랜치에서는 검증과 빌드만 실행하고 배포하지 않습니다.
 
-최초 전환 시:
+새 글을 올리는 순서:
 
-1. 미리보기를 확인한 뒤 이 브랜치를 main에 머지합니다.
-2. 저장소 **Settings → Pages → Build and deployment → Source**를 **GitHub Actions**로 바꿉니다. 기존 `gh-pages` 브랜치는 롤백용으로 보존합니다.
-3. **Actions → Build and deploy Astro → Run workflow**에서 **main**을 선택하여 수동 실행합니다.
-4. 빌드·검증이 통과하면 `github-pages` 환경에 배포됩니다. 해당 환경에 별도의 승인 규칙이 있으면 GitHub에서 승인합니다.
+1. 글과 이미지를 추가하고 로컬 미리보기에서 확인합니다.
+2. main에 커밋을 push하거나 PR을 만들어 main에 머지합니다.
+3. **Actions → Build and deploy Astro**에서 빌드와 배포의 성공 여부를 확인합니다. 실패하면 로그를 확인해 수정한 뒤 다시 push합니다.
+
+설정 변경 없이 다시 배포하려면 같은 워크플로의 **Run workflow → main**을 수동 실행할 수도 있습니다. Pages의 Source는 이미 **GitHub Actions**로 설정되어 있습니다.
 
 주소는 계속 `https://jihoon-ernesto.github.io/`입니다. 사용자 사이트이므로 별도 `base` 경로를 설정하지 않습니다. 별도 PAT나 클라우드 서비스는 필요하지 않습니다. 배포 job만 Pages 쓰기·OIDC 권한을 받으며, PR 빌드는 저장소 읽기 권한만 가집니다. Actions는 커밋 SHA로 고정했고 Dependabot이 npm과 Actions 업데이트를 월별로 제안합니다.
-
-이후에도 공개 반영은 main에서 이 워크플로를 수동 실행할 때만 일어납니다.
 
 ## 롤백
 

@@ -35,9 +35,9 @@ jobs:
         with:
           path: dist
 
-  # Deliberately manual: merging this migration must not publish the new site.
+  # Main pushes (including merged PRs) publish; pull requests only validate.
   deploy:
-    if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
+    if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main'
     needs: build
     runs-on: ubuntu-24.04
     permissions:
