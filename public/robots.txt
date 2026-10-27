@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://jihoon-ernesto.github.io/sitemap-index.xml
