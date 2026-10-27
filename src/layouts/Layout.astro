@@ -15,7 +15,12 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     {noindex && <meta name="robots" content="noindex" />}
     <link rel="canonical" href={canonical} />
-    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.ico?v=2" sizes="16x16 32x32 48x48 64x64" />
+    <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/favicon-192.png" sizes="192x192" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" sizes="any" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+    <meta name="theme-color" content="#286853" />
     <link rel="alternate" type="application/rss+xml" title={siteName} href="/rss.xml" />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
